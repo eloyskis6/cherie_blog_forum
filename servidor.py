@@ -829,5 +829,9 @@ if __name__ == '__main__':
     init_video_db(connect, ROOT)
     init_image_db(connect, ROOT)
     print('Chérie em http://127.0.0.1:8000/perfil.html')
-    ThreadingHTTPServer(('127.0.0.1',8000),Handler).serve_forever()
+    ThreadingHTTPServer(
+    (os.environ.get("IP", "127.0.0.1"),
+     int(os.environ.get("PORT", "8000"))),
+    Handler
+).serve_forever()
 
