@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#718b80">
+  <title>Meu perfil | Chérie</title>
+  <link rel="stylesheet" href="cadastro.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="conclusao.css">
+  <link rel="stylesheet" href="perfil.css">
+</head>
+
+<body>
+  <div class="desktop">
+
+    <header class="top-strip" aria-label="Cabeçalho">
+      <div class="top-metal"></div>
+      <div class="top-controls">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <div class="shell">
+
+      <!-- BARRA LATERAL ESQUERDA -->
+      <aside class="sidebar" aria-label="Navegação">
+
+        <div class="module-caption">Navegação</div>
+
+        <div class="orb-wrap">
+          <div class="orb">
+            <div class="orb-core">
+            </div>
+          </div>
+        </div>
+
+        <nav class="navigation">
+          <a class="nav-button selected"
+             href="index.html">Início</a>
+
+          <a class="nav-button" href="#" aria-disabled="true">Posts</a>
+          <a class="nav-button" href="#" aria-disabled="true">Vídeos</a>
+          <a class="nav-button" href="#" aria-disabled="true">Imagens</a>
+          <a class="nav-button" href="#" aria-disabled="true">Sobre</a>
+          <a class="nav-button" href="#" aria-disabled="true">Regras</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="small-lights">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+          </div>
+
+      </aside>
+
+      <!-- PAINEL PRINCIPAL -->
+      <main class="main-panel">
+
+        <div class="window-title">
+          <span class="window-indicator"></span>
+          Meu perfil
+
+          <div class="window-actions">
+            <span>_</span>
+            <span>□</span>
+            <span>×</span>
+          </div>
+        </div>
+
+        <!-- BANNER -->
+        <section class="hero" aria-label="Boas-vindas">
+
+          <div class="hero-inner">
+  <img
+    src="cherie.png"
+    alt="Chérie"
+    class="site-logo"
+  >
+  <div class="hero-rule"></div>
+</div>
+
+          <div class="hero-circles" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </section>
+
+        <div class="panel-separator">
+          <span>Conta / Meu perfil</span>
+        </div>
+
+        <section class="welcome-window" aria-label="Meu perfil">
+          <div class="welcome-heading">Meu perfil</div>
+          <div class="profile-cover" id="cover" role="img" aria-label="Banner do perfil"><span>CHÉRIE / USER PROFILE</span></div>
+          <div class="profile-summary">
+            <img id="avatar" class="profile-avatar" src="initial.jpeg" alt="Foto do perfil">
+            <div class="profile-identity"><h2 id="profile-name">Carregando...</h2><p id="profile-meta"></p><p id="profile-status" role="status" aria-live="polite"></p><a id="public-link" href="#">Visualizar perfil público</a></div>
+          </div>
+          <div class="profile-reactions" aria-label="Reações recebidas no perfil">
+  <div class="reaction-box reaction-like"><span class="reaction-symbol">♥</span><span>Curtidas</span><strong id="likes">0</strong></div>
+  <div class="reaction-box reaction-dislike"><span class="reaction-symbol">✕</span><span>Dislikes</span><strong id="dislikes">0</strong></div>
+  <small>Outras contas podem votar no seu perfil público.</small>
+</div>
+          <div class="profile-settings">
+            <section class="setting-card"><h3>Personalização</h3><label for="avatar-file">Alterar foto de perfil</label><input id="avatar-file" type="file" accept="image/png,image/jpeg,image/webp"><button type="button" id="save-avatar">Salvar foto</button><label for="banner-file">Alterar banner</label><input id="banner-file" type="file" accept="image/png,image/jpeg,image/webp"><button type="button" id="save-banner">Salvar banner</button><small>PNG, JPG ou WebP. Até 2 MB por imagem.</small></section>
+            <section class="setting-card"><h3>Privacidade</h3><label class="check"><input type="checkbox" id="hide-age"> Ocultar minha idade</label><label class="check"><input type="checkbox" id="hide-sex"> Ocultar meu sexo</label><button id="save-privacy" type="button">Salvar privacidade</button></section>
+            <section class="setting-card"><h3>Nome de usuário</h3><form id="username-form"><label for="new-username">Novo nome</label><input id="new-username" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_.-]{3,24}"><button type="submit">Alterar nome</button></form></section>
+            <section class="setting-card"><h3>Segurança</h3><form id="password-form"><label for="old-password">Senha atual</label><input id="old-password" type="password" autocomplete="current-password" required><label for="new-password">Nova senha (mínimo 7 caracteres)</label><input id="new-password" type="password" minlength="7" maxlength="128" autocomplete="new-password" required><label for="repeat-password">Confirme a nova senha</label><input id="repeat-password" type="password" minlength="7" maxlength="128" autocomplete="new-password" required><button type="submit">Alterar senha</button></form></section>
+          </div>
+          <div class="profile-bottom"><a class="account-button profile-home" href="index.html">Voltar ao início</a><button id="logout" class="account-button profile-home" type="button">Sair da conta</button></div>
+        </section>
+<div class="bottom-controls">
+          <span class="round-led"></span>
+          <span>Made by Eloyse</span>
+
+          <div class="decorative-bars">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+
+      </main>
+
+      <!-- BARRA LATERAL DIREITA -->
+      <aside class="right-rail" aria-label="Painel de acesso">
+
+        <div class="rail-top">
+          <div class="large-dial">
+            <div class="dial-inside"></div>
+          </div>
+          <span>Controle</span>
+        </div>
+
+        <div class="rail-meter">
+          <span>Pessoas aqui agora:</span>
+          <strong>00</strong>
+          <div class="meter-fill"></div>
+        </div>
+
+        <div class="rail-bars">
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+        </div>
+
+        <div class="rail-section-title">
+          Conta
+        </div>
+
+        <a class="account-button" href="cadastro.html" aria-current="page">
+          Realize o cadastro
+        </a>
+
+        <a class="account-button" href="login.html">
+          Faça o login
+        </a>
+
+        <div class="rail-dial">
+          <div></div>
+        </div>
+
+        <div class="rail-footer">
+          Gatorade
+        </div>
+
+      </aside>
+
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer class="taskbar"><div class="start-mark">B&amp;B</div><div class="task-fill"></div><div class="task-time">Tudo ok :3</div></footer>
+
+  </div>
+<script src="perfil.js" defer></script>
+</body>
+</html>

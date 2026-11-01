@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <meta name="theme-color" content="#718b80">
+
+  <title>Login</title>
+
+  <link rel="stylesheet" href="cadastro.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+
+  <script src="login.js" defer></script>
+</head>
+
+<body>
+  <div class="desktop">
+
+    <header class="top-strip" aria-label="Cabeçalho">
+      <div class="top-metal"></div>
+      <div class="top-controls">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <div class="shell">
+
+      <!-- BARRA LATERAL ESQUERDA -->
+      <aside class="sidebar" aria-label="Navegação">
+
+        <div class="module-caption">Navegação</div>
+
+        <div class="orb-wrap">
+          <div class="orb">
+            <div class="orb-core"></div>
+          </div>
+        </div>
+
+        <nav class="navigation">
+          <a class="nav-button" href="index.html">Início</a>
+          <a class="nav-button" href="#" aria-disabled="true">Posts</a>
+          <a class="nav-button" href="#" aria-disabled="true">Vídeos</a>
+          <a class="nav-button" href="#" aria-disabled="true">Imagens</a>
+          <a class="nav-button" href="#" aria-disabled="true">Sobre</a>
+          <a class="nav-button" href="#" aria-disabled="true">Regras</a>
+          <a class="nav-button" href="#" aria-disabled="true">Blog</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="small-lights">
+            <i></i><i></i><i></i>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- PAINEL PRINCIPAL -->
+      <main class="main-panel">
+
+        <div class="window-title">
+          <span class="window-indicator"></span>
+          Login
+
+          <div class="window-actions">
+            <span>_</span>
+            <span>□</span>
+            <a href="index.html"
+               class="login-window-close"
+               aria-label="Fechar login"
+               title="Fechar">×</a>
+          </div>
+        </div>
+
+        <!-- BANNER ORIGINAL -->
+        <section class="hero" aria-label="Chérie">
+
+          <div class="hero-inner">
+            <img
+              src="cherie.png"
+              alt="Chérie"
+              class="site-logo"
+            >
+            <div class="hero-rule"></div>
+          </div>
+
+          <div class="hero-circles" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </section>
+
+        <div class="panel-separator">
+          <span>Conta / Login</span>
+        </div>
+
+        <!-- LOGIN -->
+        <section class="welcome-window register-window"
+                 aria-label="Faça o login">
+
+          <div class="welcome-heading">
+            Entre na sua conta
+          </div>
+
+          <div class="register-layout login-layout">
+
+            <!-- GATINHA -->
+            <div class="register-art login-art">
+              <img
+                src="cherie.login.png"
+                alt="Gatinha Chérie se lambendo"
+                class="writing-cat"
+              >
+              <p>Você voltou?</p>
+            </div>
+
+            <!-- FORMULÁRIO -->
+            <form id="login-form"
+                  class="register-form login-form">
+
+              <label for="identifier">
+                Nome de usuário ou e-mail
+              </label>
+
+              <input
+                id="identifier"
+                name="identifier"
+                type="text"
+                autocomplete="username"
+                placeholder="Seu usuário ou e-mail"
+                required
+              >
+
+              <label for="password">
+                Senha
+              </label>
+
+              <div class="password-field">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  autocomplete="current-password"
+                  placeholder="Digite sua senha"
+                  required
+                >
+
+                <button
+                  type="button"
+                  class="toggle-password"
+                  id="toggle-login-password"
+                  aria-label="Mostrar senha"
+                  aria-pressed="false"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="login-recovery">
+                <a href="recuperar.html" id="forgot-password">
+  Esqueci minha senha
+</a>
+               </a>
+              </div>
+
+              <button
+                class="register-submit"
+                type="submit"
+              >
+                Entrar na conta
+              </button>
+
+              <p
+                id="login-message"
+                class="form-feedback"
+                role="status"
+                aria-live="polite"
+              ></p>
+
+              <div class="login-register">
+                <span>Ainda não possui uma conta?</span>
+                <a href="cadastro.html">
+                  Realize o cadastro
+                </a>
+              </div>
+
+            </form>
+
+          </div>
+        </section>
+
+        <div class="bottom-controls">
+          <span class="round-led"></span>
+          <span>Made by Eloyse</span>
+
+          <div class="decorative-bars">
+            <i></i><i></i><i></i>
+          </div>
+        </div>
+
+      </main>
+
+      <!-- BARRA LATERAL DIREITA -->
+      <aside class="right-rail" aria-label="Painel de acesso">
+
+        <div class="rail-top">
+          <div class="large-dial">
+            <div class="dial-inside"></div>
+          </div>
+          <span>Controle</span>
+        </div>
+
+        <div class="rail-meter">
+         <span>Pessoas aqui agora:</span>
+ <strong data-online-count aria-live="polite">—</strong>
+         <div class="meter-fill"></div>
+       </div>
+
+        <div class="rail-bars">
+          <i></i><i></i><i></i><i></i><i></i>
+        </div>
+
+        <div class="rail-section-title">
+          Conta
+        </div>
+
+        <a class="account-button" href="cadastro.html">
+          Realize o cadastro
+        </a>
+
+        <a class="account-button"
+           href="login.html"
+           aria-current="page">
+          Faça o login
+        </a>
+
+        <div class="rail-dial">
+          <div></div>
+        </div>
+
+        <div class="rail-footer">
+          Gatorade
+        </div>
+
+      </aside>
+
+    </div>
+
+        <footer class="taskbar"><div class="start-mark"class="task-fill"></div></footer>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("toggle-login-password")
+      .addEventListener("click", function () {
+        const input = document.getElementById("password");
+        const visible = input.type === "password";
+
+        input.type = visible ? "text" : "password";
+        this.setAttribute("aria-pressed", String(visible));
+        this.setAttribute(
+          "aria-label",
+          visible ? "Ocultar senha" : "Mostrar senha"
+        );
+      });
+
+    
+  </script>
+
+</body>
+<script src="presenca.js" defer></script>
+<script src="inicio-feed.js" defer></script>
+</html>

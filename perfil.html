@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <meta name="theme-color" content="#718b80">
+
+  <title>Meu perfil | Chérie</title>
+
+  <link rel="stylesheet" href="cadastro.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="conclusao.css">
+  <link rel="stylesheet" href="perfil.css">
+  <link rel="stylesheet" href="bandeiras.css">
+</head>
+
+<body>
+  <div class="desktop">
+
+    <!-- CABEÇALHO -->
+    <header class="top-strip" aria-label="Cabeçalho">
+      <div class="top-metal"></div>
+      <div class="top-controls">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <div class="shell">
+
+      <!-- BARRA LATERAL ESQUERDA -->
+      <aside class="sidebar" aria-label="Navegação">
+
+        <div class="module-caption">Navegação</div>
+
+        <div class="orb-wrap">
+          <div class="orb">
+            <div class="orb-core"></div>
+          </div>
+        </div>
+
+        <nav class="navigation">
+          <a class="nav-button" href="index2.html">Início</a>
+          <a class="nav-button" href="posts.html">Posts</a>
+          <a class="nav-button" href="videos.html">Vídeos</a>
+          <a class="nav-button" href="imagens.html">Imagens</a>
+          <a class="nav-button" href="sobre.html">Sobre</a>
+          <a class="nav-button" href="regras.html">Regras</a>
+          <a class="nav-button" href="blog.html" aria-disabled="true">Blog</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="small-lights">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- PAINEL PRINCIPAL -->
+      <main class="main-panel">
+
+        <div class="window-title">
+          <span class="window-indicator"></span>
+          Seu perfil
+
+          <div class="window-actions">
+            <span>_</span>
+            <span>□</span>
+            <a
+              href="index2.html"
+              class="login-window-close"
+              aria-label="Fechar perfil"
+              title="Fechar"
+            >×</a>
+          </div>
+        </div>
+
+        <!-- BANNER ORIGINAL -->
+        <section class="hero" aria-label="Chérie">
+          <div class="hero-inner">
+            <img
+              src="cherie.png"
+              alt="Chérie"
+              class="site-logo"
+            >
+            <div class="hero-rule"></div>
+          </div>
+
+          <div class="hero-circles" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </section>
+
+        <div class="panel-separator">
+          <span>Meu perfil</span>
+        </div>
+
+        <!-- PERFIL -->
+        <section class="welcome-window" aria-label="Meu perfil">
+
+          <div class="welcome-heading">
+            Meu perfil
+          </div>
+
+          <!-- CAPA -->
+          <div
+            class="profile-cover"
+            id="cover"
+            role="img"
+            aria-label="Banner do perfil"
+          >
+            <span>Banner do seu perfil</span>
+          </div>
+
+          <!-- IDENTIDADE -->
+          <div class="profile-summary">
+
+            <img
+              id="avatar"
+              class="profile-avatar"
+              src="initial.jpeg"
+              alt="Foto do perfil"
+            >
+
+            <div class="profile-identity">
+              <h2 id="profile-name">Carregando...</h2>
+
+              <p id="profile-meta"></p>
+
+<!-- PAÍS DO USUÁRIO -->
+<div id="profile-country" class="profile-country" hidden></div>
+
+              <p
+                id="profile-status"
+                role="status"
+                aria-live="polite"
+              ></p>
+
+              <a id="public-link" href="#">
+                Visualizar perfil público
+              </a>
+            </div>
+
+          </div>
+
+          <!-- REAÇÕES -->
+          <div
+            class="profile-reactions"
+            aria-label="Reações recebidas no perfil"
+          >
+
+            <div class="reaction-box reaction-like">
+              <span class="reaction-symbol">♥</span>
+              <span>Curtidas</span>
+              <strong id="likes">0</strong>
+            </div>
+
+            <div class="reaction-box reaction-dislike">
+              <span class="reaction-symbol">✕</span>
+              <span>Dislikes</span>
+              <strong id="dislikes">0</strong>
+            </div>
+
+            <small>
+              Outras contas podem votar no seu perfil.
+            </small>
+
+          </div>
+
+          <!-- CONFIGURAÇÕES -->
+          <div class="profile-settings">
+
+            <!-- PERSONALIZAÇÃO -->
+            <section class="setting-card">
+              <h3>Personalização</h3>
+
+              <label for="avatar-file">
+                Alterar foto de perfil
+              </label>
+
+              <input
+                id="avatar-file"
+                type="file"
+                accept="image/png,image/jpeg,image/webp"
+              >
+
+              <button type="button" id="save-avatar">
+                Salvar foto
+              </button>
+
+              <label for="banner-file">
+                Alterar banner
+              </label>
+
+              <input
+                id="banner-file"
+                type="file"
+                accept="image/png,image/jpeg,image/webp"
+              >
+
+              <button type="button" id="save-banner">
+                Salvar banner
+              </button>
+
+              <small>
+                PNG, JPG ou WebP. Até 2 MB por imagem.
+              </small>
+            </section>
+
+<!-- PAÍS / LOCALIZAÇÃO -->
+<section class="setting-card country-settings">
+
+  <h3>País / Localização</h3>
+
+  <p class="country-description">
+    De qual país você é? Escolha um país para
+    aparecer no seu perfil e nos comentários.
+  </p>
+
+  <label for="country">
+    Seu país
+  </label>
+
+  <select
+    id="country"
+    name="country"
+    class="country-select"
+  >
+    <option value="">Selecione seu país...</option>
+  </select>
+
+  <small class="country-help">
+    Você pode alterar essa informação quando quiser.
+  </small>
+
+  <button
+    type="button"
+    id="save-country"
+  >
+    Salvar país
+  </button>
+
+</section>
+
+
+            <!-- PRIVACIDADE -->
+            <section class="setting-card">
+              <h3>Privacidade</h3>
+
+              <label class="check">
+                <input type="checkbox" id="hide-age">
+                Ocultar minha idade
+              </label>
+
+              <label class="check">
+                <input type="checkbox" id="hide-sex">
+                Ocultar meu sexo
+              </label>
+
+              <label class="check">
+              <input
+               type="checkbox"
+               id="hide-country"
+                  >
+              Ocultar meu país
+             </label>
+
+
+              <button id="save-privacy" type="button">
+                Salvar privacidade
+              </button>
+            </section>
+
+            <!-- NOME DE USUÁRIO -->
+            <section class="setting-card">
+              <h3>Nome de usuário</h3>
+
+              <form id="username-form">
+                <label for="new-username">
+                  Novo nome
+                </label>
+
+                <input
+                  id="new-username"
+                  required
+                  minlength="3"
+                  maxlength="24"
+                  pattern="[A-Za-z0-9_.-]{3,24}"
+                >
+
+                <button type="submit">
+                  Alterar nome
+                </button>
+              </form>
+            </section>
+
+            <!-- SEGURANÇA -->
+            <section class="setting-card">
+              <h3>Segurança</h3>
+
+              <form id="password-form">
+
+                <label for="old-password">
+                  Senha atual
+                </label>
+
+                <input
+                  id="old-password"
+                  type="password"
+                  autocomplete="current-password"
+                  required
+                >
+
+                <label for="new-password">
+                  Nova senha (mínimo 7 caracteres)
+                </label>
+
+                <input
+                  id="new-password"
+                  type="password"
+                  minlength="7"
+                  maxlength="128"
+                  autocomplete="new-password"
+                  required
+                >
+
+                <label for="repeat-password">
+                  Confirme a nova senha
+                </label>
+
+                <input
+                  id="repeat-password"
+                  type="password"
+                  minlength="7"
+                  maxlength="128"
+                  autocomplete="new-password"
+                  required
+                >
+
+                <button type="submit">
+                  Alterar senha
+                </button>
+
+              </form>
+            </section>
+
+          </div>
+
+          <!-- AÇÕES -->
+          <div class="profile-bottom">
+
+            <a
+              class="account-button profile-home"
+              href="index2.html"
+            >
+              Voltar ao início
+            </a>
+
+            <button
+              id="logout"
+              class="account-button profile-home"
+              type="button"
+            >
+              Sair da conta
+            </button>
+
+          </div>
+
+        </section>
+
+        <!-- RODAPÉ DO PAINEL -->
+        <div class="bottom-controls">
+          <span class="round-led"></span>
+          <span>Made by Eloyse</span>
+
+          <div class="decorative-bars">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+
+      </main>
+
+      <!-- BARRA LATERAL DIREITA -->
+      <aside class="right-rail" aria-label="Painel de acesso">
+
+        <div class="rail-top">
+          <div class="large-dial">
+            <div class="dial-inside"></div>
+          </div>
+          <span>Controle</span>
+        </div>
+
+        <div class="rail-meter">
+          <span>Pessoas aqui agora:</span>
+          <strong data-online-count aria-live="polite">—</strong>
+          <div class="meter-fill"></div>
+        </div>
+
+        <div class="rail-bars">
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+        </div>
+
+        <div class="rail-section-title">
+          Conta
+        </div>
+
+        <a class="account-button" href="#" aria-disabled="true">
+          Ajude
+        </a>
+
+        <a
+          class="account-button"
+          href="perfil.html"
+          aria-current="page"
+        >
+          Seu perfil
+        </a>
+
+        <div class="rail-dial">
+          <div></div>
+        </div>
+
+        <div class="rail-footer">
+          Gatorade
+        </div>
+
+      </aside>
+
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer class="taskbar">
+      <div class="start-mark"></div>
+    </footer>
+
+  </div>
+
+  <script src="presenca.js" defer></script>
+  <script src="bandeiras.js" defer></script>
+  <script src="paises.js" defer></script>
+  <script src="perfil.js" defer></script>
+
+</body>
+</html>
+

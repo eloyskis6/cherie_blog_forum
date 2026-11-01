@@ -1,0 +1,129 @@
+
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1200">
+
+  <title>Perfil público | Chérie</title>
+
+  <!-- ESTILOS ORIGINAIS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="perfil.css">
+
+  <!-- BANDEIRA METÁLICA -->
+  <link rel="stylesheet" href="bandeiras.css">
+
+  <style>
+    .public-page {
+      max-width: 780px;
+      margin: 35px auto;
+      padding: 12px;
+    }
+
+    .profile-reactions button {
+      justify-content: space-between;
+    }
+
+    /* POSIÇÃO DA BANDEIRA NO PERFIL */
+    .public-country {
+      margin-top: 7px;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="public-page">
+
+    <section class="setting-card">
+
+      <!-- BANNER DO USUÁRIO -->
+      <div
+        id="cover"
+        class="profile-cover"
+      ></div>
+
+      <!-- INFORMAÇÕES DO PERFIL -->
+      <div class="profile-summary">
+
+        <!-- FOTO -->
+        <img
+          id="avatar"
+          class="profile-avatar"
+          src="initial.jpeg"
+          alt="Foto do perfil"
+        >
+
+        <div class="profile-identity">
+
+          <!-- NOME -->
+          <h1 id="name">
+            Carregando...
+          </h1>
+
+          <!-- IDADE E SEXO -->
+          <p id="meta"></p>
+
+          <!-- BANDEIRA E PAÍS -->
+          <div
+            id="public-country"
+            class="public-country"
+            hidden
+          ></div>
+
+        </div>
+
+      </div>
+
+      <!-- CURTIDAS E DISLIKES -->
+      <div class="profile-reactions">
+
+        <button
+          type="button"
+          id="like"
+          class="reaction-box"
+        >
+          ♥ Curtidas
+          <strong id="likes">0</strong>
+        </button>
+
+        <button
+          type="button"
+          id="dislike"
+          class="reaction-box reaction-dislike"
+        >
+          ✕ Dislikes
+          <strong id="dislikes">0</strong>
+        </button>
+
+      </div>
+
+      <!-- MENSAGENS DO SISTEMA -->
+      <p
+        id="message"
+        role="status"
+      ></p>
+
+      <!-- VOLTAR -->
+      <a href="perfil.html">
+        Voltar
+      </a>
+
+    </section>
+
+  </main>
+
+  <!-- LISTA DE PAÍSES -->
+  <script src="paises.js" defer></script>
+
+  <!-- BANDEIRAS METÁLICAS -->
+  <script src="bandeiras.js" defer></script>
+
+  <!-- PERFIL PÚBLICO -->
+  <script src="usuario.js" defer></script>
+
+</body>
+</html>

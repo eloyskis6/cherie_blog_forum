@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <meta name="theme-color" content="#718b80">
+  <title>Cadastro | Chérie</title>
+  <link rel="stylesheet" href="cadastro.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="desktop">
+
+    <header class="top-strip" aria-label="Cabeçalho">
+      <div class="top-metal"></div>
+      <div class="top-controls">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <div class="shell">
+
+                
+<!-- BARRA LATERAL ESQUERDA -->
+<aside class="sidebar" aria-label="Navegação">
+
+  <div class="module-caption">Navegação</div>
+
+  <div class="orb-wrap">
+    <div class="orb">
+      <div class="orb-core"></div>
+    </div>
+  </div>
+
+  <nav class="navigation">
+    <a class="nav-button" href="#">Início</a>
+    <a class="nav-button" href="#">Posts</a>
+    <a class="nav-button" href="#">Vídeos</a>
+    <a class="nav-button" href="#">Imagens</a>
+    <a class="nav-button" href="#">Sobre</a>
+    <a class="nav-button" href="#">Regras</a>
+    <a class="nav-button" href="#">Blog</a>
+  </nav>
+
+  <div class="sidebar-bottom">
+    <div class="small-lights">
+      <i></i>
+      <i></i>
+      <i></i>
+    </div>
+  </div>
+
+</aside>
+
+
+      <!-- PAINEL PRINCIPAL -->
+      <main class="main-panel">
+
+        <div class="window-title">
+          <span class="window-indicator"></span>
+          Cadastro
+
+          <div class="window-actions">
+            <span>_</span>
+            <span>□</span>
+            <span>×</span>
+          </div>
+        </div>
+
+        <!-- BANNER -->
+        <section class="hero" aria-label="Boas-vindas">
+
+          <div class="hero-inner">
+  <img
+    src="cherie.png"
+    alt="Chérie"
+    class="site-logo"
+  >
+  <div class="hero-rule"></div>
+</div>
+
+          <div class="hero-circles" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </section>
+
+        <div class="panel-separator">
+          <span>Conta / Cadastro</span>
+        </div>
+
+        <!-- FORMULÁRIO DE CADASTRO -->
+        <section class="welcome-window register-window" aria-label="Cadastro">
+          <div class="welcome-heading">Crie sua conta</div>
+          <div class="register-layout">
+            <div class="register-art">
+              <img src="cadastro.cherie.jpeg" alt="Gatinha escrevendo em um caderno" class="writing-cat">
+              <p>Você irá começar por aqui.</p>
+            </div>
+            <form id="register-form" class="register-form" action="/api/cadastro" method="post">
+              <label for="username">Nome de usuário</label>
+              <input id="username" name="username" type="text" minlength="3" maxlength="24" pattern="[A-Za-z0-9_.-]{3,24}" autocomplete="username" required placeholder="Como quer ser chamado(a)?">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" maxlength="254" autocomplete="email" required placeholder="seu@email.com">
+              <label for="password">Senha</label>
+              
+<div class="password-field">
+  <input
+    type="password"
+    id="password"
+    name="password"
+    minlength="7"
+    maxlength="128"
+    placeholder="Digite sua senha"
+    autocomplete="new-password"
+    required
+  >
+
+  <button
+    type="button"
+    class="toggle-password"
+    data-target="password"
+    aria-label="Mostrar senha"
+    aria-pressed="false"
+    aria-controls="password"
+  >
+    <svg viewBox="0 0 24 24"
+         width="20"
+         height="20"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="1.8"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         aria-hidden="true">
+      <path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/>
+      <circle cx="12" cy="12" r="3"/>
+    </svg>
+  </button>
+</div>
+
+              <label for="confirm-password">Confirme sua senha</label>
+
+<div class="password-field">
+  <input
+    type="password"
+    id="confirm-password"
+    name="confirm_password"
+    minlength="7"
+    maxlength="128"
+    placeholder="Confirme sua senha"
+    autocomplete="new-password"
+    required
+  >
+</div>
+
+              
+<div class="age-heading">
+  <label for="age">Sua idade</label>
+  <output id="age-value" for="age">18 anos</output>
+</div>
+
+<input
+  id="age"
+  name="age"
+  type="range"
+  min="18"
+  max="130"
+  step="1"
+  value="18"
+  aria-describedby="age-message"
+>
+
+<div class="age-scale">
+  <span>18</span>
+  <span>130</span>
+</div>
+
+<p id="age-message" class="age-message" aria-live="polite">
+  Um adulto(a) jovem :)
+</p>
+              <fieldset class="sex-fieldset">
+                <legend>Sexo (opcional)</legend>
+                <div class="sex-options">
+                  <label class="sex-choice woman"><input type="radio" name="sex" value="mulher"><span class="sex-symbol">♀</span> Fêmea</label>
+                  <label class="sex-choice man"><input type="radio" name="sex" value="homem"><span class="sex-symbol">♂</span> Macho</label>
+                  <label class="sex-choice other"><input type="radio" name="sex" value="outros"><span class="sex-symbol">⚲</span>Outra coisa</label>
+                </div>
+              </fieldset>
+<!-- PAÍS -->
+<div class="country-field">
+  <label for="country">Seu país (opcional)</label>
+
+  <select
+    id="country"
+    name="country"
+    class="country-select"
+    aria-describedby="country-help"
+  >
+    <option value="">Selecione seu país...</option>
+  </select>
+
+  <small id="country-help" class="country-help">
+    
+  </small>
+</div>
+              <p class="privacy-note">Sua idade, sexo e país vão ser exibidas, mas você pode alterar essas configurações em seu perfil.</p>
+              <button class="register-submit" type="submit">Finalizar cadastro</button>
+              <p id="form-feedback" class="form-feedback" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </section>
+<script src="paises.js" defer></script>
+<script src="cadastro.js" defer></script>
+
+        <div class="bottom-controls">
+          <span class="round-led"></span>
+          <span>Made by Eloyse</span>
+
+          <div class="decorative-bars">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+
+      </main>
+
+      <!-- BARRA LATERAL DIREITA -->
+      <aside class="right-rail" aria-label="Painel de acesso">
+
+        <div class="rail-top">
+          <div class="large-dial">
+            <div class="dial-inside"></div>
+          </div>
+          <span>Controle</span>
+        </div>
+
+                <div class="rail-meter">
+           <span>Pessoas aqui agora:</span>
+           <strong data-online-count aria-live="polite">—</strong>
+           <div class="meter-fill"></div>
+         </div>
+
+        <div class="rail-bars">
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+        </div>
+
+        <div class="rail-section-title">
+          Conta
+        </div>
+
+        <a class="account-button" href="cadastro.html" aria-current="page">
+          Realize o cadastro
+        </a>
+
+        <a class="account-button" href="login.html" aria-disabled="true">
+          Faça o login
+        </a>
+
+        <div class="rail-dial">
+          <div></div>
+        </div>
+
+        <div class="rail-footer">
+          Gatorade
+        </div>
+
+      </aside>
+
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer class="taskbar"><div class="start-mark"class="task-fill"></div></footer>
+
+  </div>
+<script src="presenca.js" defer></script>
+<script src="paises.js" defer></script>
+<script src="cadastro.js" defer></script>
+<script src="inicio-feed.js" defer></script>
+<link rel="stylesheet" href="cadastro.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="desktop-mode.css">
+</body>
+</html>
+

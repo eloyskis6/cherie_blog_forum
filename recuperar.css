@@ -1,0 +1,69 @@
+
+.recovery-layout {
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) minmax(220px, 1.2fr);
+  gap: 18px;
+  align-items: center;
+  padding: 22px;
+}
+
+.recovery-layout .register-art {
+  text-align: center;
+}
+
+.recovery-layout .writing-cat {
+  width: 100%;
+  max-width: 190px;
+  filter: drop-shadow(4px 8px 7px #385b4866);
+}
+
+.recovery-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px;
+  border: 3px ridge #d6e8d3;
+  background: linear-gradient(140deg, #c9dfc9, #87aa94);
+  box-shadow:
+    inset 2px 2px 7px #456b5580,
+    3px 4px 7px #34544470;
+}
+
+.recovery-form input {
+  width: 100%;
+  min-width: 0;
+  padding: 11px;
+  border: 2px inset #d8e9d6;
+  background: #eaf5e8;
+  color: #263f33;
+  font: inherit;
+}
+
+.recovery-form label {
+  font-weight: bold;
+  color: #345442;
+}
+
+.recovery-form a {
+  color: #254f3b;
+}
+
+.recovery-form .register-submit {
+  cursor: pointer;
+}
+
+.recovery-form .form-feedback {
+  min-height: 25px;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .recovery-layout {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .recovery-layout .writing-cat {
+    max-width: 135px;
+  }
+}

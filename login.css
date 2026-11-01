@@ -1,0 +1,304 @@
+
+/* ========================================
+   CHÉRIE LOGIN
+   Mesmo visual do cadastro original
+   ======================================== */
+
+/* Layout do formulário */
+
+.login-layout {
+  align-items: center;
+}
+
+/* Gatinha */
+
+.login-art {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+
+.login-art .writing-cat {
+  display: block;
+  width: 100%;
+  max-width: 310px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+
+  /* Mantém o formato da imagem original */
+  border: none;
+  box-shadow: none;
+}
+
+.login-art p {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 12px;
+  color: #34573d;
+  font-weight: bold;
+}
+
+/* Formulário */
+
+.login-form {
+  min-width: 0;
+}
+
+.login-form label {
+  color: #294c35;
+  font-weight: bold;
+}
+
+/* Campo de senha */
+
+.login-form .password-field {
+  position: relative;
+  width: 100%;
+}
+
+.login-form .password-field input {
+  width: 100%;
+  padding-right: 43px;
+  box-sizing: border-box;
+}
+
+.login-form .toggle-password {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 32px;
+  height: 28px;
+
+  padding: 0;
+
+  border: 2px outset #cde5d1;
+  border-radius: 5px;
+
+  background: linear-gradient(
+    to bottom,
+    #f4fff3 0%,
+    #b9d9c0 44%,
+    #6d9c7b 51%,
+    #c4dfca 100%
+  );
+
+  color: #30533b;
+  cursor: pointer;
+}
+
+.login-form .toggle-password:hover {
+  filter: brightness(1.08);
+}
+
+.login-form .toggle-password:active {
+  border-style: inset;
+}
+
+/* Esqueci minha senha */
+
+.login-recovery {
+  margin: 4px 0 12px;
+  text-align: right;
+}
+
+.login-recovery a {
+  color: #386747;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.login-recovery a:hover {
+  color: #173f26;
+}
+
+/* Cadastro abaixo do login */
+
+.login-register {
+  margin-top: 13px;
+  padding: 13px 5px 3px;
+
+  border-top: 2px groove #c4dcc9;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+
+  text-align: center;
+}
+
+.login-register span {
+  font-size: 11px;
+  color: #4c6b55;
+}
+
+.login-register a {
+  display: inline-block;
+  padding: 8px 14px;
+
+  color: #284d34;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+
+  border: 2px outset #d3e9d6;
+  border-radius: 7px;
+
+  background: linear-gradient(
+    to bottom,
+    #f6fff5 0%,
+    #cce5d1 42%,
+    #82ab8d 50%,
+    #b8d6bf 100%
+  );
+
+  box-shadow:
+    inset 0 1px 0 #ffffff,
+    1px 2px 3px #355b3e55;
+
+  text-shadow: 0 1px 0 #efffef;
+}
+
+.login-register a:hover {
+  filter: brightness(1.08);
+}
+
+.login-register a:active {
+  border-style: inset;
+}
+
+/* Botão X na barra superior */
+
+.window-actions .login-window-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 21px;
+  height: 19px;
+
+  border: 1px solid #466c50;
+  border-radius: 5px;
+
+  background: linear-gradient(
+    to bottom,
+    #f6fff5,
+    #b9d9c1 45%,
+    #699777 51%,
+    #c6e2cb
+  );
+
+  color: #214b2e;
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+
+  box-shadow: inset 0 1px #ffffff;
+}
+
+.window-actions .login-window-close:hover {
+  color: #792b2b;
+  background: linear-gradient(
+    #ffecec,
+    #e5a0a0 47%,
+    #bf6666 52%,
+    #efb9b9
+  );
+}
+
+/* Mensagens */
+
+#login-message {
+  min-height: 18px;
+  margin: 8px 0 0;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .login-layout {
+    align-items: stretch;
+  }
+
+  .login-art .writing-cat {
+    max-width: 210px;
+  }
+
+  .login-art p {
+    margin: 4px 0 12px;
+  }
+
+  .login-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .login-art .writing-cat {
+    max-width: 175px;
+  }
+
+  .login-register a {
+    max-width: 100%;
+  }
+}
+
+/* CHÉRIE - Recuperação de senha */
+
+.recovery-description {
+  margin: 8px 0 15px;
+  color: #42634c;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 11px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+#request-form {
+  min-width: 0;
+}
+
+#request-form input[type="email"] {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#request-form .register-submit {
+  width: 100%;
+  cursor: pointer;
+}
+
+#recovery-message {
+  min-height: 18px;
+  margin: 9px 0;
+  color: #294c35;
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 700px) {
+  #request-form {
+    width: 100%;
+  }
+
+  .recovery-description {
+    text-align: center;
+  }
+}

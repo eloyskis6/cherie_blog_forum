@@ -1,0 +1,859 @@
+
+/* =====================================
+   CHÉRIE / POSTS
+   Compatível com index2.css
+   ===================================== */
+
+.posts-board {
+  min-width: 0;
+}
+
+.posts-board .member-board-title {
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.posts-metal-button {
+  padding: 7px 12px;
+  max-width: 100%;
+
+  border: 2px outset #d8ebdb;
+  border-radius: 5px;
+
+  background: linear-gradient(
+    #ffffff 0%,
+    #d5ebd8 38%,
+    #86b091 48%,
+    #548561 52%,
+    #c1dfc7 100%
+  );
+
+  box-shadow:
+    inset 0 1px #ffffff,
+    1px 2px 3px #31563a55;
+
+  color: #244c31;
+  font: bold 11px Tahoma, sans-serif;
+  text-shadow: 1px 1px #ffffff;
+  cursor: pointer;
+}
+
+.posts-metal-button:hover {
+  filter: brightness(1.09);
+}
+
+.posts-metal-button:active {
+  border-style: inset;
+}
+
+.posts-metal-button:disabled {
+  opacity: .5;
+  cursor: default;
+}
+
+/* Formulários */
+
+.posts-inner-panel,
+.posts-detail {
+  margin: 12px;
+  padding: 12px;
+
+  border: 3px ridge #adc9b2;
+
+  background: linear-gradient(
+    #f5fff3,
+    #d4e8d7
+  );
+
+  box-shadow: inset 1px 1px #ffffff;
+}
+
+.posts-section-title {
+  margin-bottom: 12px;
+  padding: 8px 10px;
+
+  border: 2px ridge #bad8c1;
+
+  background: linear-gradient(
+    #f7fff6,
+    #b7d9be 44%,
+    #6e9c7b 51%,
+    #c7e3cd
+  );
+
+  color: #254c32;
+  font: bold 12px Tahoma, sans-serif;
+  text-shadow: 1px 1px #ffffff;
+}
+
+#post-form,
+#comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+#post-form label,
+#comment-form label {
+  color: #2d5138;
+  font: bold 12px Tahoma, sans-serif;
+}
+
+#post-form input,
+#post-form textarea,
+#comment-form textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 9px;
+  box-sizing: border-box;
+
+  border: 2px inset #93b39b;
+  border-radius: 3px;
+
+  background: #fafff9;
+  color: #1c3d29;
+
+  font: 12px/1.5 Tahoma, sans-serif;
+  resize: vertical;
+}
+
+#post-form small {
+  font: 10px Tahoma, sans-serif;
+  color: #50715a;
+}
+
+.posts-form-actions,
+.posts-pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.posts-pagination {
+  justify-content: space-between;
+  margin: 0 12px;
+}
+
+#page-label {
+  color: #355b40;
+  font: bold 11px Tahoma, sans-serif;
+}
+
+/* =====================================
+   POSTS E COMENTÁRIOS
+   ===================================== */
+
+#posts-feed {
+  padding: 4px 12px 12px;
+}
+
+.post-card,
+.comment-card {
+  margin: 10px 0;
+  min-width: 0;
+
+  border: 3px ridge #aac8b0;
+
+  background: linear-gradient(
+    #f8fff7,
+    #d7e9d9
+  );
+
+  box-shadow:
+    inset 1px 1px #ffffff,
+    2px 3px 4px #365d3d35;
+}
+
+.post-card-head {
+  padding: 8px 10px;
+
+  border-bottom: 2px solid #6c9678;
+
+  background: linear-gradient(
+    #f7fff6,
+    #b5d7be 45%,
+    #6b9a79 51%,
+    #c5e0ca
+  );
+
+  color: #294f36;
+  font: bold 10px Tahoma, sans-serif;
+  letter-spacing: .5px;
+  text-shadow: 1px 1px #ffffff;
+}
+
+.post-content {
+  padding: 13px;
+}
+
+.post-title {
+  margin: 0 0 10px;
+
+  color: #244d32;
+  font: bold 16px Tahoma, sans-serif;
+  overflow-wrap: anywhere;
+}
+
+.post-title a,
+.post-actions a,
+.user-link {
+  color: #245d36;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin: 8px 0 12px;
+
+  color: #55725e;
+  font: 11px Tahoma, sans-serif;
+}
+
+.post-meta img {
+  width: 32px;
+  height: 32px;
+
+  object-fit: cover;
+  border: 2px ridge #abcbb3;
+}
+
+.user-link {
+  font-weight: bold;
+}
+
+.post-body,
+.comment-body {
+  color: #283f2e;
+  font: 12px/1.7 Tahoma, sans-serif;
+
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.post-body {
+  max-height: 350px;
+  overflow: auto;
+}
+
+.post-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  padding: 8px 12px;
+
+  border-top: 2px groove #cde4d1;
+
+  background: linear-gradient(
+    #d9eddb,
+    #92b79c 49%,
+    #c5e0ca
+  );
+
+  font: 11px Tahoma, sans-serif;
+}
+
+.comment-card {
+  padding: 11px;
+}
+
+/* =====================================
+   UPVOTES / DOWNVOTES
+   ===================================== */
+
+.content-votes {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+
+  margin-top: 13px;
+  padding-top: 10px;
+
+  border-top: 2px groove #b8d3be;
+}
+
+.vote-arrow {
+  width: 33px;
+  height: 30px;
+
+  border: 2px outset #e0f0e2;
+  border-radius: 5px;
+
+  background: linear-gradient(
+    #ffffff,
+    #c5e3cb 42%,
+    #6c9b79 52%,
+    #c0dec7
+  );
+
+  color: #285537;
+  font: bold 16px Tahoma, sans-serif;
+  text-shadow: 1px 1px #ffffff;
+
+  cursor: pointer;
+}
+
+.vote-arrow:hover {
+  filter: brightness(1.12);
+}
+
+.vote-arrow.active {
+  border-style: inset;
+
+  background: linear-gradient(
+    #4d825e,
+    #b2e2bc
+  );
+
+  color: #153f24;
+}
+
+.vote-arrow:disabled {
+  opacity: .6;
+}
+
+.vote-score {
+  min-width: 22px;
+  text-align: center;
+  color: #284d34;
+  font: bold 14px Tahoma, sans-serif;
+}
+
+.vote-details {
+  color: #5b765f;
+  font: 10px Tahoma, sans-serif;
+}
+
+/* =====================================
+   MENU EXCLUSIVO DE FIGURINHAS
+   ===================================== */
+
+.sticker-bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.sticker-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 8px 12px;
+
+  border: 2px outset #d8ebdc;
+  border-radius: 6px;
+
+  background: linear-gradient(
+    #ffffff,
+    #d6ecd9 38%,
+    #85af90 49%,
+    #598868 52%,
+    #c4dfca
+  );
+
+  box-shadow:
+    inset 0 1px #ffffff,
+    1px 2px 3px #31563b55;
+
+  color: #285239;
+  font: bold 11px Tahoma, sans-serif;
+  text-shadow: 1px 1px #ffffff;
+
+  cursor: pointer;
+}
+
+.sticker-toggle[aria-expanded="true"] {
+  border-style: inset;
+}
+
+.sticker-menu {
+  margin-top: 7px;
+  padding: 9px;
+
+  border: 3px ridge #a9c8b0;
+  border-radius: 5px;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 3px,
+      #ffffff22 4px
+    ),
+    linear-gradient(
+      #e6f3e6,
+      #b3d1b9
+    );
+
+  box-shadow:
+    inset 1px 1px #ffffff,
+    2px 3px 5px #294b3355;
+}
+
+.sticker-menu-title {
+  padding: 6px 9px;
+  margin-bottom: 9px;
+
+  border: 2px ridge #b8d7c0;
+
+  background: linear-gradient(
+    #f6fff5,
+    #b7d7be 45%,
+    #76a383 51%,
+    #d2e9d6
+  );
+
+  color: #30553b;
+  font: bold 10px Tahoma, sans-serif;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px #ffffff;
+}
+
+.sticker-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.sticker-choice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  height: 83px;
+  padding: 5px;
+
+  border: 2px outset #e0f1e2;
+  border-radius: 5px;
+
+  background: linear-gradient(
+    #fafff9,
+    #c7e0cb
+  );
+
+  cursor: pointer;
+}
+
+.sticker-choice img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sticker-choice:hover {
+  background: #eaffeb;
+  filter: brightness(1.05);
+}
+
+.sticker-choice:active {
+  border-style: inset;
+}
+
+.cat-sticker {
+  display: inline-block;
+  width: 76px;
+  height: 76px;
+
+  max-width: 100%;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+/* =====================================
+   ESTADOS E RESPONSIVIDADE
+   ===================================== */
+
+#forum-feedback {
+  min-height: 16px;
+  padding: 0 12px;
+  color: #8b3e3e;
+  font: 11px Tahoma, sans-serif;
+}
+
+.empty-posts {
+  margin: 10px 0;
+  padding: 40px 12px;
+
+  border: 2px inset #b8d0be;
+
+  background: #f3faf2;
+  color: #59715e;
+  text-align: center;
+  font: 12px Tahoma, sans-serif;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 700px) {
+  .posts-inner-panel,
+  .posts-detail {
+    margin: 8px;
+    padding: 9px;
+  }
+
+  #posts-feed {
+    padding: 4px 8px;
+  }
+
+  .post-content {
+    padding: 10px;
+  }
+
+  .sticker-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sticker-choice {
+    height: 78px;
+  }
+
+  .cat-sticker {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+
+/* =====================================
+   CHÉRIE - EXCLUSÃO DE CONTEÚDO
+   ===================================== */
+
+.delete-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 10px;
+  padding-top: 9px;
+
+  border-top: 2px groove #c5dcc9;
+}
+
+.delete-content-button {
+  color: #773535;
+
+  background: linear-gradient(
+    #fff8f8 0%,
+    #ebcaca 40%,
+    #bd8585 49%,
+    #965858 52%,
+    #e2baba 100%
+  );
+
+  border: 2px outset #e9caca;
+
+  text-shadow: 1px 1px #ffffff;
+
+  font: bold 11px Tahoma, sans-serif;
+}
+
+.delete-content-button:hover {
+  filter: brightness(1.08);
+}
+
+.delete-content-button:active {
+  border-style: inset;
+}
+
+/* =========================================
+   CHÉRIE - FILTROS METÁLICOS Y2K
+   ========================================= */
+
+.posts-filter-bar {
+  display: flex;
+  align-items: stretch;
+  gap: 7px;
+  padding: 9px 12px;
+
+  background: linear-gradient(
+    to bottom,
+    #526e62 0%,
+    #a8c5b2 12%,
+    #8eaf9d 48%,
+    #6d9180 51%,
+    #b5d0bd 100%
+  );
+
+  border-top: 2px ridge #d5e7d7;
+  border-bottom: 3px ridge #527665;
+
+  box-shadow:
+    inset 0 1px 1px #effff0,
+    inset 0 -2px 3px #446b57;
+}
+
+.posts-filter-bar .filter-button {
+  flex: 1;
+  min-width: 0;
+  padding: 9px 8px;
+
+  font: bold 11px Georgia, serif;
+  letter-spacing: 0.3px;
+  color: #1c4130;
+
+  text-shadow: 0 1px 1px #f0fff0;
+
+  background: linear-gradient(
+    to bottom,
+    #f2fff1 0%,
+    #cce3d3 12%,
+    #8eb5a1 43%,
+    #527d6b 49%,
+    #396452 52%,
+    #83b19b 78%,
+    #d7f0db 100%
+  );
+
+  border: 2px outset #b9d7c4;
+  border-radius: 5px;
+
+  box-shadow:
+    inset 1px 1px 1px #ffffff,
+    inset -1px -2px 3px #466e59,
+    1px 2px 2px #456958;
+
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.posts-filter-bar .filter-button:hover {
+  filter: brightness(1.13);
+}
+
+.posts-filter-bar .filter-button.active {
+  color: #e6fff0;
+  text-shadow: 1px 1px 2px #183a29;
+
+  background: linear-gradient(
+    to bottom,
+    #305b49,
+    #719f88 35%,
+    #9cc9aa 50%,
+    #416c56 53%,
+    #244a38 100%
+  );
+
+  border-style: inset;
+
+  box-shadow:
+    inset 2px 3px 5px #173c2a,
+    0 1px 1px #d4efda;
+}
+
+/* =========================================
+   CHÉRIE - FILTROS E BUSCA Y2K METÁLICOS
+   ========================================= */
+
+/* Barra dos filtros */
+.posts-filter-bar {
+  display: flex;
+  gap: 7px;
+  padding: 7px 9px;
+  margin: 0;
+
+  background: linear-gradient(
+    180deg,
+    #c5dfcc 0%,
+    #8eaf9b 15%,
+    #648b77 49%,
+    #a4c5af 52%,
+    #789d89 100%
+  );
+
+  border-top: 2px solid #e2f4e5;
+  border-bottom: 2px solid #496d58;
+  box-shadow:
+    inset 0 1px #ffffff,
+    inset 0 -1px #c8e3d0;
+}
+
+/* Botões metálicos */
+.posts-filter-bar .filter-button {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 5px;
+
+  color: #193b2a;
+  font: bold 12px Georgia, "Times New Roman", serif;
+  text-shadow: 1px 1px 0 #eaffee;
+
+  background: linear-gradient(
+    180deg,
+    #f8fff9 0%,
+    #d8eddf 17%,
+    #a8cdb6 43%,
+    #5c8971 49%,
+    #7da88e 55%,
+    #c4dfcc 88%,
+    #e9f8ec 100%
+  );
+
+  border: 1px solid #446d56;
+  border-radius: 7px;
+
+  box-shadow:
+    inset 1px 1px 0 #ffffff,
+    inset -1px -1px 0 #50745e,
+    0 2px 3px #3e6650;
+
+  cursor: pointer;
+  transition: filter 0.15s;
+}
+
+.posts-filter-bar .filter-button:hover {
+  filter: brightness(1.12);
+}
+
+/* Botão selecionado */
+.posts-filter-bar .filter-button.active {
+  color: #f3fff5;
+  text-shadow: 1px 1px 2px #173c29;
+
+  background: linear-gradient(
+    180deg,
+    #b3d9be 0%,
+    #729f83 30%,
+    #345c46 49%,
+    #4d8062 55%,
+    #8cbaa0 100%
+  );
+
+  border: 1px solid #2e5740;
+
+  box-shadow:
+    inset 1px 2px 5px #294d38,
+    inset 0 -1px 0 #d0ebd7;
+}
+
+/* Barra de busca */
+.posts-search-form {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 7px 9px;
+
+  background: linear-gradient(
+    180deg,
+    #c7dfce,
+    #8eaf9b 45%,
+    #a8c8b2
+  );
+
+  border: 1px solid #658b72;
+  box-shadow:
+    inset 1px 1px #e9f8ec,
+    inset -1px -1px #567d64;
+}
+
+.posts-search-form input {
+  flex: 1;
+  min-width: 0;
+  height: 29px;
+  padding: 4px 9px;
+
+  color: #274331;
+  font: 12px Tahoma, sans-serif;
+
+  background: linear-gradient(
+    #d9e9de,
+    #ffffff 35%,
+    #f3faf5
+  );
+
+  border: 2px inset #8eae99;
+  border-radius: 2px;
+
+  box-shadow: inset 1px 1px 3px #9bb8a2;
+}
+
+.posts-search-form input:focus {
+  outline: 1px solid #527e61;
+}
+
+/* Botão Buscar */
+.posts-search-form button {
+  flex-shrink: 0;
+  min-height: 29px;
+  padding: 4px 13px;
+
+  color: #23432e;
+  font: bold 11px Tahoma, sans-serif;
+  text-shadow: 1px 1px #ffffff;
+
+  background: linear-gradient(
+    #f5fff7 0%,
+    #c5dfcc 40%,
+    #719b80 51%,
+    #c2dec9 100%
+  );
+
+  border: 1px solid #557962;
+  border-radius: 5px;
+
+  box-shadow:
+    inset 1px 1px #ffffff,
+    inset -1px -1px #62866d,
+    0 2px 2px #648672;
+
+  cursor: pointer;
+}
+
+.posts-search-form button:hover {
+  filter: brightness(1.08);
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  .posts-filter-bar {
+    gap: 4px;
+    padding: 6px 5px;
+  }
+
+  .posts-filter-bar .filter-button {
+    padding: 7px 3px;
+    font-size: 11px;
+  }
+
+  .posts-search-form {
+    gap: 5px;
+    padding: 6px;
+  }
+
+  .posts-search-form input {
+    width: 100%;
+    font-size: 11px;
+  }
+
+  .posts-search-form button {
+    padding: 4px 8px;
+  }
+}
+
+/* Vídeos Chérie: extensão do visual original dos Posts */
+#video-form { display:flex; flex-direction:column; gap:9px; }
+#video-form label { color:#2d5138; font:bold 12px Tahoma,sans-serif; }
+#video-form input,#video-form textarea { box-sizing:border-box; width:100%; min-width:0; padding:9px; border:2px inset #93b39b; background:#fafff9; color:#1c3d29; font:12px Tahoma,sans-serif; }
+#video-form small { color:#50715a; font:11px Tahoma,sans-serif; }
+#videos-feed { padding:4px 12px 12px; }
+.video-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin:12px 0; }
+.video-grid video { width:100%; max-height:320px; background:#15251a; border:3px ridge #aac8b0; display:block; }
+.video-grid figure { margin:0; min-width:0; }
+.video-grid figcaption { color:#43634b; font:11px Tahoma,sans-serif; padding:4px; overflow-wrap:anywhere; }
+#video-selected { color:#355b40; font:11px Tahoma,sans-serif; overflow-wrap:anywhere; }
+@media(max-width:650px) {.video-grid { grid-template-columns:1fr; }}

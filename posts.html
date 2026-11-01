@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <meta name="theme-color" content="#718b80">
+
+  <title>Posts | Chérie</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index2.css">
+  <link rel="stylesheet" href="posts.css">
+
+  <script src="posts.js" defer></script>
+</head>
+
+<body>
+<div class="desktop">
+
+  <header class="top-strip" aria-label="Cabeçalho">
+    <div class="top-metal"></div>
+    <div class="top-controls">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <div class="shell">
+
+    <!-- MENU ESQUERDO ORIGINAL -->
+    <aside class="sidebar" aria-label="Navegação">
+
+      <div class="module-caption">Navegação</div>
+
+      <div class="orb-wrap">
+        <div class="orb">
+          <div class="orb-core"></div>
+        </div>
+      </div>
+
+      <nav class="navigation">
+        <a class="nav-button" href="index2.html">Início</a>
+        <a class="nav-button selected" href="posts.html">Posts</a>
+        <a class="nav-button" href="videos.html" aria-disabled="true">Vídeos</a>
+        <a class="nav-button" href="imagens.html" aria-disabled="true">Imagens</a>
+        <a class="nav-button" href="sobre.html" aria-disabled="true">Sobre</a>
+        <a class="nav-button" href="regras.html" aria-disabled="true">Regras</a>
+  <a class="nav-button" href="blog.html" aria-disabled="true">Blog</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="small-lights">
+          <i></i><i></i><i></i>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- PAINEL CENTRAL -->
+    <main class="main-panel">
+ <div class="window-title">
+  -  Publicações em texto:
+ 
+         <div class="window-actions">
+          <span>_</span>
+          <span>□</span>
+          <span>×</span>
+        </div>
+      </div>
+
+      <!-- BANNER ORIGINAL -->
+      <section class="hero" aria-label="Chérie">
+
+        <div class="hero-inner">
+          <img
+            src="cherie.png"
+            alt="Chérie"
+            class="site-logo"
+          >
+          <div class="hero-rule"></div>
+        </div>
+
+        <div class="hero-circles" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+
+      </section>
+      
+<div class="posts-filter-bar">
+
+  <button
+    type="button"
+    class="metal-button filter-button"
+    data-sort="relevantes"
+  >
+    Relevantes
+  </button>
+
+  <button
+    type="button"
+    class="metal-button filter-button active"
+    data-sort="recentes"
+  >
+    Recentes
+  </button>
+
+  <button
+    type="button"
+    class="metal-button filter-button"
+    data-sort="antigos"
+  >
+    Antigos
+  </button>
+
+</div>
+
+      <!-- PUBLICAÇÕES -->
+      <section class="welcome-window member-welcome">
+
+        <div class="welcome-heading">
+          Explore:
+        </div>
+
+        <div class="member-intro">
+          <p>Publicações em texto:</p>
+        </div>
+
+        
+<form id="posts-search-form" class="posts-search-form" role="search">
+  <input
+    type="search"
+    id="posts-search"
+    placeholder="Buscar publicações..."
+    aria-label="Buscar publicações"
+    maxlength="100"
+  >
+  <button type="submit" class="metal-button">
+    Buscar
+  </button>
+</form>
+
+
+        <section class="member-board posts-board">
+
+          <div class="member-board-title">
+            <span>Posts</span>
+
+            <button
+              type="button"
+              id="open-compose"
+              class="posts-metal-button"
+            >
+              + Criar publicação
+            </button>
+          </div>
+
+          <p
+            id="forum-feedback"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+          <!-- CRIAR POST -->
+          <section
+            id="compose-panel"
+            class="posts-inner-panel"
+            hidden
+          >
+            <div class="posts-section-title">
+              Nova publicação
+            </div>
+
+            <form id="post-form">
+
+              <label for="post-title">Título</label>
+              <input
+                id="post-title"
+                maxlength="120"
+                required
+                placeholder="Título da publicação"
+              >
+
+              <label for="post-body">Descrição</label>
+              <textarea
+                id="post-body"
+                maxlength="5000"
+                rows="7"
+                required
+                placeholder="Escreva sua publicação..."
+              ></textarea>
+
+              <!-- MENU EXCLUSIVO DAS FIGURINHAS -->
+              <div
+                class="sticker-bar"
+                data-target="post-body"
+              ></div>
+
+              <small>
+                Apenas texto e figurinhas Chérie.
+              </small>
+
+              <div class="posts-form-actions">
+                <button
+                  type="submit"
+                  class="posts-metal-button"
+                >
+                  Publicar
+                </button>
+
+                <button
+                  type="button"
+                  id="cancel-compose"
+                  class="posts-metal-button"
+                >
+                  Cancelar
+                </button>
+              </div>
+
+            </form>
+          </section>
+
+          <!-- POST ABERTO -->
+          <section
+            id="post-detail"
+            class="posts-detail"
+            hidden
+          >
+
+            <div class="posts-form-actions">
+              <button
+                type="button"
+                id="back-to-posts"
+                class="posts-metal-button"
+              >
+                ← Voltar aos posts
+              </button>
+            </div>
+
+            <div id="detail-content"></div>
+
+            <div class="posts-section-title">
+              Comentários
+            </div>
+
+            <div id="comments-list"></div>
+
+            <form id="comment-form">
+
+              <label for="comment-body">
+                Escreva um comentário
+              </label>
+
+              <textarea
+                id="comment-body"
+                maxlength="2000"
+                rows="4"
+                required
+                placeholder="Seu comentário..."
+              ></textarea>
+
+              <div
+                class="sticker-bar"
+                data-target="comment-body"
+              ></div>
+
+              <button
+                type="submit"
+                class="posts-metal-button"
+              >
+                Comentar
+              </button>
+
+            </form>
+
+          </section>
+
+          <!-- LISTA DE PUBLICAÇÕES -->
+          <section
+            id="posts-feed"
+            aria-label="Lista de publicações"
+          ></section>
+
+          <div id="pagination" class="posts-pagination">
+            <button
+              type="button"
+              id="prev-page"
+              class="posts-metal-button"
+            >
+              ← Anterior
+            </button>
+
+            <span id="page-label">Página 1</span>
+
+            <button
+              type="button"
+              id="next-page"
+              class="posts-metal-button"
+            >
+              Próxima →
+            </button>
+          </div>
+
+          <div class="member-board-bottom">
+            <span>PUBLICAÇÕES</span>
+          </div>
+
+        </section>
+
+      </section>
+
+      <div class="bottom-controls">
+        <span class="round-led"></span>
+        <span>Made by Eloyse</span>
+
+        <div class="decorative-bars">
+          <i></i><i></i><i></i>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- PAINEL DIREITO ORIGINAL -->
+    <aside class="right-rail" aria-label="Sua conta">
+
+      <div class="rail-top">
+        <div class="large-dial">
+          <div class="dial-inside"></div>
+        </div>
+        <span>Controle</span>
+      </div>
+
+      <div class="rail-meter">
+        <span>Pessoas aqui agora:</span>
+<strong data-online-count aria-live="polite">—</strong>
+        <div class="meter-fill"></div>
+      </div>
+
+      <div class="rail-bars">
+        <i></i><i></i><i></i><i></i><i></i>
+      </div>
+
+      <div class="rail-section-title">
+        Sua conta
+      </div>
+
+      <div class="member-account">
+
+        <div class="member-account-header">
+          <span class="account-led"></span>
+          CONECTADO
+        </div>
+
+        <img
+          src="initial.jpeg"
+          alt="Sua foto de perfil"
+          id="forum-avatar"
+          class="member-avatar"
+        >
+
+        <strong id="forum-username">
+          Carregando...
+        </strong>
+
+        <span class="member-account-caption">
+          usuário
+        </span>
+
+      </div>
+
+      <a class="account-button" href="#" aria-current="page">
+           Ajude
+         </a>
+
+        <a class="account-button" href="perfil.html">
+  Seu perfil
+</a>
+
+      <div class="rail-dial">
+        <div></div>
+      </div>
+
+      <div class="rail-footer">
+        Gatorade
+      </div>
+
+    </aside>
+
+  </div>
+
+  <footer class="taskbar">
+    <div class="start-mark"></div>
+    <div class="task-fill"></div>
+  </footer>
+
+</div>
+<script src="presenca.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <meta name="theme-color" content="#718b80">
+
+  <title>Início</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index2.css">
+
+  <script src="index2.js" defer></script>
+</head>
+
+<body>
+<div class="desktop">
+
+  <header class="top-strip" aria-label="Cabeçalho">
+    <div class="top-metal"></div>
+    <div class="top-controls">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <div class="shell">
+
+    <!-- MENU ESQUERDO -->
+    <aside class="sidebar" aria-label="Navegação">
+
+      <div class="module-caption">Navegação</div>
+
+      <div class="orb-wrap">        <div class="orb">
+          <div class="orb-core"></div>
+        </div>
+      </div>
+
+      <nav class="navigation">
+        <a class="nav-button selected" href="index2.html">Início</a>
+        <a class="nav-button" href="posts.html" aria-disabled="true">Posts</a>
+        <a class="nav-button" href="videos.html" aria-disabled="true">Vídeos</a>
+        <a class="nav-button" href="imagens.html" aria-disabled="true">Imagens</a>
+        <a class="nav-button" href="sobre.html" aria-disabled="true">Sobre</a>
+        <a class="nav-button" href="regras.html" aria-disabled="true">Regras</a>
+        <a class="nav-button" href="blog.html" aria-disabled="true">Blog</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="small-lights">
+          <i></i><i></i><i></i>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- PAINEL CENTRAL -->
+    <main class="main-panel">
+
+      <div class="window-title">
+       - Início:
+
+        <div class="window-actions">
+          <span>_</span>
+          <span>□</span>
+          <span>×</span>
+        </div>
+      </div>
+
+      <!-- LOGO ORIGINAL -->
+      <section class="hero" aria-label="Chérie">
+        <div class="hero-inner">
+          <img
+            src="cherie.png"
+            alt="Chérie"
+            class="site-logo"
+          >
+          <div class="hero-rule"></div>
+        </div>
+
+        <div class="hero-circles" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </section>
+
+      <div class="panel-separator">
+        <span>Comunidade</span>
+      </div>
+
+      <!-- BOAS-VINDAS -->
+      <section class="welcome-window member-welcome">
+
+        <div class="welcome-heading">
+          Explore:
+        </div>
+
+<div class="member-intro">
+  <p id="welcome-message" aria-live="polite">
+    Oi, é um prazer te ter aqui!
+    <strong id="welcome-username">...</strong>!
+  </p>
+</div>    
+        <div class="member-divider">
+          <span>Todas as publicações recentes:</span>
+        </div>
+
+        <!-- PUBLICAÇÕES RECENTES -->
+<section class="member-board" aria-label="Publicações recentes">
+  <div class="member-board-title">
+    <span>Posts, vídeos e imagens</span>
+    <button type="button" id="home-refresh">Atualizar</button>
+  </div>
+
+  <p id="home-feedback" role="status" aria-live="polite"></p>
+
+  <div id="home-feed"></div>
+
+  <div class="home-feed-controls">
+    <button type="button" id="home-more">Carregar mais</button>
+  </div>
+
+  <div class="member-board-bottom">
+    <span>Publicações exibidas:</span>
+    <span id="home-count">0</span>
+  </div>
+</section>
+
+      </section>
+
+      <div class="bottom-controls">
+        <span class="round-led"></span>
+        <span>Made by Eloyse</span>
+
+        <div class="decorative-bars">
+          <i></i><i></i><i></i>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- PAINEL DIREITO: CONTA CONECTADA -->
+    <aside class="right-rail" aria-label="Sua conta">
+
+      <div class="rail-top">
+        <div class="large-dial">
+          <div class="dial-inside"></div>
+        </div>
+        <span>Controle</span>
+      </div>
+
+      <div class="rail-meter">
+        <span>Pessoas aqui agora:</span>
+<strong data-online-count aria-live="polite">—</strong>
+        <div class="meter-fill"></div>
+      </div>
+
+      <div class="rail-bars">
+        <i></i><i></i><i></i><i></i><i></i>
+      </div>
+
+      <div class="rail-section-title">
+        Sua conta
+      </div>
+
+      <div class="member-account">
+
+        <div class="member-account-header">
+          <span class="account-led"></span>
+          CONECTADO
+        </div>
+
+        <img
+          src="initial.jpeg"
+          alt="Sua foto de perfil"
+          id="member-avatar"
+          class="member-avatar"
+        >
+
+        <strong id="member-username">Carregando...</strong>
+
+        <span class="member-account-caption">
+          usuário
+        </span>
+
+      </div>
+
+      <a class="account-button" href="ajuda.html">
+        Ajude
+      </a>
+
+     <a class="account-button" href="perfil.html">
+         Seu perfil     
+       </a>
+
+      </button>
+
+      <div class="rail-dial">
+        <div></div>
+      </div>
+
+      <div class="rail-footer">
+        Gatorade
+      </div>
+
+    </aside>
+
+  </div>
+
+         <footer class="taskbar"><div class="start-mark"class="task-fill"></div></footer>
+  </footer>
+
+</div>
+<script src="presenca.js" defer></script>
+<link rel="stylesheet" href="mobile.css">
+<script src="inicio-feed.js" defer></script>
+</body>
+</html>

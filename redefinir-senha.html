@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#718b80">
+
+  <title>Redefinir senha | Chérie</title>
+
+  <link rel="stylesheet" href="cadastro.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+
+  <style>
+    .reset-description {
+      color: #42634c;
+      font-size: 11px;
+      line-height: 1.6;
+      margin: 8px 0 15px;
+    }
+
+    .reset-form input {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    #reset-message {
+      min-height: 20px;
+      font-size: 11px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 700px) {
+      .reset-form {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<div class="desktop">
+
+  <header class="top-strip">
+    <div class="top-metal"></div>
+    <div class="top-controls">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <div class="shell">
+
+    <aside class="sidebar">
+      <div class="module-caption">Navegação</div>
+
+      <div class="orb-wrap">
+        <div class="orb">
+          <div class="orb-core"></div>
+        </div>
+      </div>
+
+      <nav class="navigation">
+        <a class="nav-button selected" href="index.html">Início</a>
+        <a class="nav-button" href="#" aria-disabled="true">Posts</a>
+        <a class="nav-button" href="#" aria-disabled="true">Vídeos</a>
+        <a class="nav-button" href="#" aria-disabled="true">Imagens</a>
+        <a class="nav-button" href="#" aria-disabled="true">Sobre</a>
+        <a class="nav-button" href="#" aria-disabled="true">Regras</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="small-lights">
+          <i></i><i></i><i></i>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+
+      <div class="window-title">
+        <span class="window-indicator"></span>
+        Redefinir senha
+
+        <div class="window-actions">
+          <span>_</span>
+          <span>□</span>
+          <a
+            href="login.html"
+            class="login-window-close"
+            aria-label="Fechar"
+          >×</a>
+        </div>
+      </div>
+
+      <section class="hero" aria-label="Chérie">
+        <div class="hero-inner">
+          <img
+            src="cherie.png"
+            alt="Chérie"
+            class="site-logo"
+          >
+          <div class="hero-rule"></div>
+        </div>
+
+        <div class="hero-circles" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </section>
+
+      <div class="panel-separator">
+        <span>Conta / Segurança</span>
+      </div>
+
+      <section class="welcome-window register-window">
+        <div class="welcome-heading">
+          Criar nova senha
+        </div>
+
+        <div class="register-layout login-layout">
+
+          <div class="register-art login-art">
+            <img
+              src="cherie.senha.png"
+              alt="Gatinha Chérie"
+              class="writing-cat"
+            >
+            <p>Uma nova senha para sua conta!</p>
+          </div>
+
+          <form
+            id="reset-form"
+            class="register-form login-form reset-form"
+          >
+
+            <p class="reset-description">
+              Digite sua nova senha para recuperar
+              o acesso à sua conta.
+            </p>
+
+            <label for="new-password">
+              Nova senha
+            </label>
+
+            <input
+              id="new-password"
+              type="password"
+              autocomplete="new-password"
+              minlength="7"
+              maxlength="128"
+              placeholder="Digite sua nova senha"
+              required
+            >
+
+            <label for="confirm-password">
+              Confirmar nova senha
+            </label>
+
+            <input
+              id="confirm-password"
+              type="password"
+              autocomplete="new-password"
+              minlength="7"
+              maxlength="128"
+              placeholder="Repita a nova senha"
+              required
+            >
+
+            <button
+              type="submit"
+              class="register-submit"
+            >
+              Redefinir senha
+            </button>
+
+            <p
+              id="reset-message"
+              class="form-feedback"
+              role="status"
+              aria-live="polite"
+            ></p>
+
+            <div class="login-register">
+              <span>Lembrou sua senha?</span>
+              <a href="login.html">
+                Voltar ao login
+              </a>
+            </div>
+
+          </form>
+
+        </div>
+      </section>
+
+      <div class="bottom-controls">
+        <span class="round-led"></span>
+        <span>Made by Eloyse</span>
+
+        <div class="decorative-bars">
+          <i></i><i></i><i></i>
+        </div>
+      </div>
+
+    </main>
+
+    <aside class="right-rail">
+      <div class="rail-top">
+        <div class="large-dial">
+          <div class="dial-inside"></div>
+        </div>
+        <span>Controle</span>
+      </div>
+
+      <div class="rail-meter">
+        <span>Pessoas aqui agora:</span>
+        <strong>00</strong>
+        <div class="meter-fill"></div>
+      </div>
+
+      <div class="rail-bars">
+        <i></i><i></i><i></i><i></i><i></i>
+      </div>
+
+      <div class="rail-section-title">Conta</div>
+
+      <a class="account-button" href="cadastro.html">
+        Realize o cadastro
+      </a>
+
+      <a class="account-button" href="login.html">
+        Faça o login
+      </a>
+
+      <div class="rail-dial"><div></div></div>
+      <div class="rail-footer">Gatorade</div>
+    </aside>
+
+  </div>
+
+  <footer class="taskbar">
+    <div class="start-mark"></div>
+  </footer>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("reset-form");
+  const message = document.getElementById("reset-message");
+  const button = form.querySelector('button[type="submit"]');
+
+  const params = new URLSearchParams(window.location.search);
+  const token = params.get("token");
+
+  // Evita manter o token visível na barra de endereço.
+  if (token) {
+    history.replaceState(null, "", window.location.pathname);
+  }
+
+  if (!token) {
+    message.textContent = "Link de recuperação inválido.";
+    message.style.color = "#a02c2c";
+    button.disabled = true;
+    return;
+  }
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const password = document.getElementById("new-password").value;
+    const confirm = document.getElementById("confirm-password").value;
+
+    if (password !== confirm) {
+      message.textContent = "As senhas não coincidem.";
+      message.style.color = "#a02c2c";
+      return;
+    }
+
+    if (password.length < 7 || password.length > 128) {
+      message.textContent = "A senha deve ter entre 7 e 128 caracteres.";
+      message.style.color = "#a02c2c";
+      return;
+    }
+
+    button.disabled = true;
+    message.textContent = "Alterando senha...";
+
+    try {
+      const response = await fetch("/api/recuperacao/redefinir", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          token,
+          password
+        })
+      });
+
+      const data = await response.json();
+
+      message.textContent = data.message ||
+        (response.ok ? "Senha alterada!" : "Não foi possível alterar a senha.");
+
+      message.style.color = response.ok ? "#294c35" : "#a02c2c";
+
+      if (response.ok) {
+        button.disabled = true;
+        form.reset();
+      } else {
+        button.disabled = false;
+      }
+
+    } catch (error) {
+      message.textContent = "Erro de conexão com o servidor.";
+      message.style.color = "#a02c2c";
+      button.disabled = false;
+    }
+  });
+});
+</script>
+
+</body>
+</html>

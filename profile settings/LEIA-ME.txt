@@ -1,0 +1,17 @@
+CHÉRIE - Correção de perfil (desenvolvimento local)
+
+1. Faça backup da pasta forum_metalico, especialmente usuarios.db.
+2. Copie os arquivos desta pasta para a MESMA pasta que contém seu usuarios.db, substituindo servidor.py, perfil.html, perfil.js e perfil.css.
+3. Mantenha index.html, cadastro.html, cadastro.js, style.css, cadastro.css e demais imagens que já usa.
+4. Encerre o servidor anterior com Ctrl+C.
+5. Inicie: cd ~/Downloads/forum_metalico && python3 servidor.py
+6. Acesse http://127.0.0.1:8000/login.html e entre com sua conta existente. As sessões antigas expiram quando o servidor reinicia.
+7. Abra http://127.0.0.1:8000/perfil.html.
+
+Novas rotas: /api/me, /api/perfil, /api/perfil/senha, /api/login, /api/voto, /api/usuario.
+O servidor cria as colunas novas automaticamente sem apagar as contas antigas.
+Os uploads ficam em uploads/ e têm limite de 2 MB por arquivo.
+Os votos são feitos por outra conta, na página usuario.html?id=ID.
+Senha mínima de 7 caracteres conforme solicitado, embora senhas longas sejam mais seguras.
+
+Atenção: esta versão é para testes locais, não para disponibilizar na internet sem melhorias de segurança.

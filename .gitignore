@@ -1,0 +1,25 @@
+# Banco de dados e arquivos privados
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Segredos
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Backups e arquivos temporários
+*.backup
+*.bak
+*~

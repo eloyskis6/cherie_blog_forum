@@ -1,0 +1,66 @@
+
+/* ==========================================
+   CHÉRIE - MODO DESKTOP EM TODAS AS TELAS
+   ========================================== */
+
+/* Mantém a composição original de três colunas */
+
+.desktop {
+  width: 1180px !important;
+  min-width: 1180px !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+}
+
+.shell {
+  display: grid !important;
+  grid-template-columns: 190px minmax(0, 1fr) 174px !important;
+  gap: 10px !important;
+  padding: 14px 12px 18px !important;
+}
+
+.sidebar {
+  display: block !important;
+  grid-column: auto !important;
+  width: auto !important;
+}
+
+.main-panel {
+  grid-column: auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+}
+
+.right-rail {
+  display: flex !important;
+  flex-direction: column !important;
+  grid-column: auto !important;
+  width: auto !important;
+}
+
+.navigation {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+}
+
+/* Evita que regras mobile ocultem peças do layout */
+
+.orb-wrap,
+.sidebar-bottom,
+.rail-top,
+.rail-meter,
+.rail-bars,
+.rail-dial,
+.rail-footer {
+  display: block !important;
+}
+
+/* Mantém o formulário sem reorganização mobile */
+
+.register-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) !important;
+}
+
+.sex-options {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}

@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#718b80">
+
+  <title>Recuperar senha | Chérie</title>
+
+  <link rel="stylesheet" href="cadastro.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+
+  <script src="recuperacao.js" defer></script>
+</head>
+
+<body>
+  <div class="desktop">
+
+    <header class="top-strip" aria-label="Cabeçalho">
+      <div class="top-metal"></div>
+      <div class="top-controls">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <div class="shell">
+
+      <!-- BARRA LATERAL ESQUERDA -->
+      <aside class="sidebar" aria-label="Navegação">
+
+        <div class="module-caption">Navegação</div>
+
+        <div class="orb-wrap">
+          <div class="orb">
+            <div class="orb-core"></div>
+          </div>
+        </div>
+
+        <nav class="navigation">
+          <a class="nav-button selected" href="index.html">
+            Início
+          </a>
+          <a class="nav-button" href="#" aria-disabled="true">
+            Posts
+          </a>
+          <a class="nav-button" href="#" aria-disabled="true">
+            Vídeos
+          </a>
+          <a class="nav-button" href="#" aria-disabled="true">
+            Imagens
+          </a>
+          <a class="nav-button" href="#" aria-disabled="true">
+            Sobre
+          </a>
+          <a class="nav-button" href="#" aria-disabled="true">
+            Regras
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="small-lights">
+            <i></i><i></i><i></i>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- PAINEL PRINCIPAL -->
+      <main class="main-panel">
+
+        <div class="window-title">
+          <span class="window-indicator"></span>
+          Recuperar senha
+
+          <div class="window-actions">
+            <span>_</span>
+            <span>□</span>
+            <a
+              href="login.html"
+              class="login-window-close"
+              aria-label="Voltar ao login"
+              title="Fechar"
+            >×</a>
+          </div>
+        </div>
+
+        <!-- BANNER ORIGINAL -->
+        <section class="hero" aria-label="Chérie">
+
+          <div class="hero-inner">
+            <img
+              src="cherie.png"
+              alt="Chérie"
+              class="site-logo"
+            >
+            <div class="hero-rule"></div>
+          </div>
+
+          <div class="hero-circles" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </section>
+
+        <div class="panel-separator">
+          <span>Conta / Recuperar senha</span>
+        </div>
+
+        <!-- RECUPERAÇÃO -->
+        <section
+          class="welcome-window register-window"
+          aria-label="Recuperação de senha"
+        >
+
+          <div class="welcome-heading">
+            Esqueceu sua senha?
+          </div>
+
+          <div class="register-layout login-layout">
+
+            <!-- GATINHA ORIGINAL -->
+            <div class="register-art login-art">
+              <img
+                src="cherie.login.png"
+                alt="Gatinha Chérie se lambendo"
+                class="writing-cat"
+              >
+              <p>Vamos recuperar sua conta?</p>
+            </div>
+
+            <!-- FORMULÁRIO -->
+            <form
+              id="request-form"
+              class="register-form login-form"
+            >
+
+              <label for="email">
+                E-mail cadastrado
+              </label>
+
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="Digite seu e-mail"
+                maxlength="254"
+                required
+              >
+
+              <p class="recovery-description">
+                Informe o e-mail utilizado no cadastro.
+                Enviaremos um link para redefinir sua senha.
+              </p>
+
+              <button
+                class="register-submit"
+                type="submit"
+              >
+                Enviar link de recuperação
+              </button>
+
+              <p
+                id="recovery-message"
+                class="form-feedback"
+                role="status"
+                aria-live="polite"
+              ></p>
+
+              <div class="login-register">
+                <span>Lembrou sua senha?</span>
+                <a href="login.html">
+                  Voltar ao login
+                </a>
+              </div>
+
+            </form>
+
+          </div>
+        </section>
+
+        <div class="bottom-controls">
+          <span class="round-led"></span>
+          <span>Made by Eloyse</span>
+
+          <div class="decorative-bars">
+            <i></i><i></i><i></i>
+          </div>
+        </div>
+
+      </main>
+
+      <!-- BARRA LATERAL DIREITA -->
+      <aside class="right-rail" aria-label="Painel de acesso">
+
+        <div class="rail-top">
+          <div class="large-dial">
+            <div class="dial-inside"></div>
+          </div>
+          <span>Controle</span>
+        </div>
+
+        <div class="rail-meter">
+          <span>Pessoas aqui agora:</span>
+          <strong>00</strong>
+          <div class="meter-fill"></div>
+        </div>
+
+        <div class="rail-bars">
+          <i></i><i></i><i></i><i></i><i></i>
+        </div>
+
+        <div class="rail-section-title">
+          Conta
+        </div>
+
+        <a class="account-button" href="cadastro.html">
+          Realize o cadastro
+        </a>
+
+        <a class="account-button" href="login.html">
+          Faça o login
+        </a>
+
+        <div class="rail-dial">
+          <div></div>
+        </div>
+
+        <div class="rail-footer">
+          Gatorade
+        </div>
+
+      </aside>
+
+    </div>
+
+    <footer class="taskbar">
+      <div class="start-mark"></div>
+    </footer>
+
+  </div>
+</body>
+</html>
+

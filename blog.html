@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <meta name="theme-color" content="#718b80">
+  <title>Blog | Chérie</title>
+
+  <link rel="stylesheet" href="cadastro.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="posts.css">
+  <link rel="stylesheet" href="blog.css">
+
+  <script src="blog.js" defer></script>
+  <script src="presenca.js" defer></script>
+</head>
+
+<body>
+<div class="desktop">
+
+  <header class="top-strip" aria-label="Cabeçalho">
+    <div class="top-metal"></div>
+    <div class="top-controls">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <div class="shell">
+
+    <!-- NAVEGAÇÃO -->
+    <aside class="sidebar" aria-label="Navegação">
+
+      <div class="module-caption">Navegação</div>
+
+      <div class="orb-wrap">
+        <div class="orb">
+          <div class="orb-core"></div>
+        </div>
+      </div>
+
+      <nav class="navigation">
+        <a class="nav-button" href="index2.html">Início</a>
+        <a class="nav-button" href="posts.html">Posts</a>
+        <a class="nav-button" href="videos.html">Vídeos</a>
+        <a class="nav-button" href="imagens.html">Imagens</a>
+        <a class="nav-button" href="sobre.html">Sobre</a>
+        <a class="nav-button" href="regras.html">Regras</a>
+        <a class="nav-button selected" href="blog.html"
+           aria-current="page">Blog</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="small-lights">
+          <i></i><i></i><i></i>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- PAINEL PRINCIPAL -->
+    <main class="main-panel">
+
+      <div class="window-title">
+        <span class="window-indicator"></span>
+        Blog
+
+        <div class="window-actions">
+          <span>_</span>
+          <span>□</span>
+          <a href="index2.html"
+             class="blog-window-close"
+             aria-label="Fechar blog">×</a>
+        </div>
+      </div>
+
+      <!-- BANNER ORIGINAL DO CHÉRIE -->
+      <section class="hero" aria-label="Chérie">
+        <div class="hero-inner">
+          <img src="cherie.png"
+               alt="Chérie"
+               class="site-logo">
+          <div class="hero-rule"></div>
+        </div>
+
+        <div class="hero-circles" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </section>
+
+      <div class="panel-separator">
+        <span>- Notícias:</span>
+      </div>
+
+      <section class="welcome-window blog-window"
+               aria-label="Blog da Chérie">
+
+        <div class="welcome-heading">
+          Blog da Chérie
+        </div>
+
+        <!-- APRESENTAÇÃO -->
+        <div class="blog-welcome">
+
+          <div class="blog-welcome-image">
+            <img src="cherie.jornal.png"
+                 alt="Gatinha Chérie">
+          </div>
+
+          <div class="blog-welcome-text">
+            <strong>Bem-vindo(a) ao nosso blog!</strong>
+
+            <p>
+              Aqui ficam as novidades, os avisos e notícias.
+            </p>
+
+            <p>
+              As publicações são feitas pela administração,
+              mas os comentários estão abertos para
+              a comunidade.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- EDITOR ADMINISTRATIVO -->
+        <section id="blog-admin"
+                 class="posts-inner-panel blog-admin"
+                 hidden>
+
+          <div class="posts-section-title">
+            Nova publicação
+          </div>
+
+          <p class="blog-admin-note">
+            Painel de publicação exclusivo da conta eloyse.
+          </p>
+
+          <form id="blog-create-form">
+
+            <label for="blog-title">
+              Título
+            </label>
+
+            <input id="blog-title"
+                   type="text"
+                   maxlength="150"
+                   placeholder="Título da publicação"
+                   required>
+
+            <label for="blog-subtitle">
+              Subtítulo (opcional)
+            </label>
+
+            <input id="blog-subtitle"
+                   type="text"
+                   maxlength="300"
+                   placeholder="Uma breve descrição">
+
+            <label for="blog-content">
+              Conteúdo
+            </label>
+
+            <textarea id="blog-content"
+                      rows="9"
+                      maxlength="30000"
+                      placeholder="Escreva aqui..."
+                      required></textarea>
+
+            <div class="blog-media-editor">
+              <label for="blog-images">Imagens (até 10, 12 MB cada)</label>
+              <input id="blog-images" type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple>
+              <label for="blog-videos">Vídeos (até 6, 150 MB cada, 30 minutos)</label>
+              <input id="blog-videos" type="file" accept="video/mp4,video/webm,video/quicktime,video/x-matroska" multiple>
+              <div id="blog-media-preview" class="blog-media-preview" aria-live="polite"></div>
+            </div>
+
+            <div class="posts-form-actions">
+              <button class="posts-metal-button"
+                      type="submit">
+                Publicar
+              </button>
+            </div>
+
+            <p id="blog-create-status"
+               class="blog-feedback"
+               role="status"></p>
+
+          </form>
+
+        </section>
+
+        <!-- PUBLICAÇÕES -->
+        <section class="blog-publications">
+
+          <div class="posts-section-title blog-list-title">
+            <span>Publicações recentes</span>
+            <small id="blog-total">Carregando...</small>
+          </div>
+
+          <div id="blog-feed" aria-live="polite">
+            <div class="empty-posts">
+              Carregando publicações...
+            </div>
+          </div>
+
+        </section>
+
+      </section>
+
+      <div class="bottom-controls">
+        <span class="round-led"></span>
+        <span>Made by Eloyse</span>
+
+        <div class="decorative-bars">
+          <i></i><i></i><i></i>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- BARRA LATERAL DIREITA -->
+    <aside class="right-rail" aria-label="Painel de acesso">
+
+      <div class="rail-top">
+        <div class="large-dial">
+          <div class="dial-inside"></div>
+        </div>
+        <span>Controle</span>
+      </div>
+
+      <div class="rail-meter">
+        <span>Pessoas aqui agora:</span>
+        <strong data-online-count aria-live="polite">—</strong>
+        <div class="meter-fill"></div>
+      </div>
+
+      <div class="rail-bars">
+        <i></i><i></i><i></i><i></i><i></i>
+      </div>
+
+      <div class="rail-section-title">
+        Conta
+      </div>
+
+      <a class="account-button" href="perfil.html">
+        Seu perfil
+      </a>
+
+      <a class="account-button" href="index2.html">
+        Voltar ao início
+      </a>
+
+      <div class="rail-dial">
+        <div></div>
+      </div>
+
+      <div class="rail-footer">
+        Gatorade
+      </div>
+
+    </aside>
+
+  </div>
+
+  <footer class="taskbar">
+    <div class="start-mark"></div>
+  </footer>
+
+</div>
+</body>
+</html>

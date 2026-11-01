@@ -1,0 +1,522 @@
+
+/* =========================================
+   CHÉRIE - ÁREA DE MEMBROS
+   Y2K / GREEN METALLIC / 2000s
+   ========================================= */
+
+.member-welcome {
+  min-height: 340px;
+}
+
+/* Saudação */
+
+.member-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  margin: 13px 12px;
+  padding: 13px 10px;
+
+  border: 3px ridge #bad6c0;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 2px,
+      #ffffff12 3px 4px
+    ),
+    linear-gradient(
+      #f3fff2 0%,
+      #c4e2cb 43%,
+      #84ad90 50%,
+      #d3ead7 100%
+    );
+
+  box-shadow:
+    inset 1px 1px #ffffff,
+    2px 3px 4px #294b3455;
+}
+
+.member-intro p {
+  margin: 0;
+  font: bold 14px Tahoma, Verdana, sans-serif;
+  color: #284c34;
+  text-align: center;
+  overflow-wrap: anywhere;
+  text-shadow: 1px 1px #ffffff;
+}
+
+.member-intro strong {
+  color: #225b35;
+}
+
+.member-sparkle {
+  color: #568b64;
+  font-size: 17px;
+  text-shadow: 1px 1px #fff;
+}
+
+/* Separador cromado */
+
+.member-divider {
+  position: relative;
+  margin: 20px 13px;
+  border-top: 2px groove #d9ebdc;
+  text-align: center;
+}
+
+.member-divider span {
+  position: relative;
+  top: -10px;
+
+  padding: 4px 14px;
+
+  border: 1px solid #70967a;
+  background: linear-gradient(
+    #f7fff6,
+    #c6e2cc 45%,
+    #78a786 52%,
+    #d2e9d5
+  );
+
+  color: #335c3f;
+  font: bold 9px Tahoma, sans-serif;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px #fff;
+}
+
+/* Área de publicações */
+
+.member-board {
+  margin: 10px 13px 20px;
+  border: 3px ridge #a8c5ae;
+
+  background: #eaf4e9;
+
+  box-shadow:
+    inset 0 0 0 1px #ffffff,
+    2px 3px 5px #31543b44;
+}
+
+.member-board-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 9px 13px;
+
+  border-bottom: 2px solid #6a9677;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #ffffff12 0 1px,
+      transparent 1px 4px
+    ),
+    linear-gradient(
+      #f3fff3,
+      #b5d6be 43%,
+      #5d936d 50%,
+      #b5d6be
+    );
+
+  color: #244c31;
+  font: bold 12px Tahoma, sans-serif;
+  text-shadow: 1px 1px #ffffff;
+}
+
+.board-indicator {
+  color: #5cb978;
+  font-size: 12px;
+  text-shadow: 0 0 5px #a5ffc0;
+}
+
+.member-board-empty {
+  min-height: 210px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 3px,
+      #7b9f8512 4px
+    ),
+    linear-gradient(
+      135deg,
+      #f8fff7,
+      #d8e9d9
+    );
+
+  border: 3px inset #c0d8c4;
+}
+
+.empty-symbol {
+  color: #a9c6af;
+  font-size: 35px;
+  text-shadow: 1px 1px #fff;
+}
+
+.member-board-bottom {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 6px 10px;
+
+  border-top: 2px groove #d9eedc;
+
+  background: linear-gradient(
+    #d5e9d8,
+    #94b99e 48%,
+    #729d7e 52%,
+    #c4dec9
+  );
+
+  color: #2d5338;
+  font: bold 9px Tahoma, sans-serif;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px #fff;
+}
+
+/* =========================================
+   PAINEL DA CONTA
+   ========================================= */
+
+.member-account {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  margin: 10px 6px 12px;
+  padding: 0 8px 13px;
+
+  border: 3px ridge #a8cbb1;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 3px,
+      #ffffff12 4px
+    ),
+    linear-gradient(
+      #dceedd,
+      #a1c2aa
+    );
+
+  box-shadow:
+    inset 1px 1px #ffffff,
+    1px 2px 4px #1b3c2855;
+}
+
+.member-account-header {
+  width: calc(100% + 16px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  margin-bottom: 5px;
+  padding: 8px 4px;
+
+  border-bottom: 2px solid #4e805d;
+
+  background: linear-gradient(
+    #f3fff1,
+    #b3d8bc 42%,
+    #598a67 51%,
+    #a7cdb1
+  );
+
+  color: #244b30;
+  font: bold 10px Tahoma, sans-serif;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px #ffffff;
+}
+
+.account-led {
+  width: 9px;
+  height: 9px;
+
+  border: 1px solid #26743a;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle at 30% 25%,
+    #ffffff,
+    #a8ffb8 30%,
+    #40b45d 60%,
+    #176b30
+  );
+
+  box-shadow: 0 0 5px #70e98b;
+}
+
+.member-avatar {
+  width: 83px;
+  height: 83px;
+
+  display: block;
+  object-fit: cover;
+
+  border: 4px ridge #c7dfcc;
+  border-radius: 7px;
+
+  background: #e7f5e8;
+
+  box-shadow:
+    inset 0 0 0 1px #fff,
+    2px 3px 5px #294c3466;
+}
+
+#member-username {
+  display: block;
+  max-width: 100%;
+
+  color: #264f35;
+  font: bold 12px Tahoma, sans-serif;
+  text-align: center;
+  overflow-wrap: anywhere;
+  text-shadow: 1px 1px #fff;
+}
+
+.member-account-caption {
+  padding: 3px 8px;
+
+  border: 1px solid #7fa489;
+
+  background: linear-gradient(
+    #f8fff7,
+    #b9d8c0
+  );
+
+  color: #557561;
+  font: bold 9px Tahoma, sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Botão sair */
+
+.member-logout {
+  display: block;
+  width: 100%;
+
+  font-family: Tahoma, sans-serif;
+  cursor: pointer;
+}
+
+/* Responsividade */
+
+@media (max-width: 700px) {
+  .member-intro {
+    gap: 7px;
+    padding: 11px 6px;
+  }
+
+  .member-intro p {
+    font-size: 12px;
+  }
+
+  .member-board {
+    margin: 10px 8px 15px;
+  }
+
+  .member-board-empty {
+    min-height: 160px;
+  }
+
+  .member-account {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  .member-avatar {
+    width: 70px;
+    height: 70px;
+  }
+}
+/* Feed unificado do Início */
+
+#home-feedback {
+  margin: 0;
+  padding: 12px;
+  color: #31543b;
+  font: 12px Tahoma, sans-serif;
+}
+
+#home-feedback:empty {
+  display: none;
+}
+
+#home-feed {
+  display: grid;
+  gap: 12px;
+  padding: 12px;
+  min-width: 0;
+}
+
+.home-post {
+  min-width: 0;
+  padding: 14px;
+  border: 2px ridge #b1cdb7;
+  background: linear-gradient(135deg, #f8fff7, #dfeddf);
+  box-shadow: 1px 2px 4px #31543b22;
+  color: #284c34;
+  font: 13px Tahoma, Verdana, sans-serif;
+  overflow-wrap: anywhere;
+}
+
+.home-post-header,
+.home-post-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.home-post-type {
+  padding: 4px 8px;
+  border: 1px solid #789f82;
+  background: linear-gradient(#f4fff2, #b4d4bc);
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.home-post-date {
+  color: #526c59;
+  font-size: 11px;
+}
+
+.home-post-title {
+  margin: 12px 0;
+  font-size: 17px;
+}
+
+.home-post a {
+  color: #245f37;
+}
+
+.home-post-title a {
+  text-decoration: none;
+}
+
+.home-post-title a:hover {
+  text-decoration: underline;
+}
+
+.home-post-author {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.home-post-avatar {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border: 2px ridge #c3d9c7;
+  border-radius: 4px;
+}
+
+.home-post-body {
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.home-sticker {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.home-media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.home-media-grid:empty {
+  display: none;
+}
+
+.home-media-grid > :only-child {
+  grid-column: 1 / -1;
+}
+
+.home-media-grid a {
+  display: block;
+  min-width: 0;
+}
+
+.home-media-grid img,
+.home-media-grid video {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  border: 2px inset #c0d8c4;
+  background: #15291c;
+}
+
+.home-post-footer {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid #b6cebc;
+  font-size: 11px;
+}
+
+.home-feed-controls {
+  padding: 0 12px 12px;
+  text-align: center;
+}
+
+#home-more,
+#home-refresh {
+  padding: 7px 12px;
+  border: 2px outset #c7dfcc;
+  background: linear-gradient(#f4fff2, #a5c9af);
+  color: #284c34;
+  font: bold 11px Tahoma, sans-serif;
+  cursor: pointer;
+}
+
+#home-more:disabled,
+#home-refresh:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+#home-more[hidden] {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  #home-feed {
+    padding: 8px;
+  }
+
+  .home-post {
+    padding: 10px;
+  }
+
+  .home-media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-post-title {
+    font-size: 15px;
+  }
+}

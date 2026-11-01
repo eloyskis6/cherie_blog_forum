@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=1200">
+<meta content="#718b80" name="theme-color"/>
+<title>Vídeos | Chérie</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="index2.css" rel="stylesheet"/>
+<link href="videos.css" rel="stylesheet"/>
+<script defer="" src="videos.js"></script>
+</head>
+<body>
+<div class="desktop">
+<header aria-label="Cabeçalho" class="top-strip">
+<div class="top-metal"></div>
+<div class="top-controls">
+<span></span><span></span><span></span>
+</div>
+</header>
+<div class="shell">
+<!-- MENU ESQUERDO ORIGINAL -->
+<aside aria-label="Navegação" class="sidebar">
+<div class="module-caption">Navegação</div>
+<div class="orb-wrap">
+<div class="orb">
+<div class="orb-core"></div>
+</div>
+</div>
+<nav class="navigation">
+<a class="nav-button" href="index2.html">Início</a>
+<a class="nav-button" href="posts.html">Posts</a>
+<a class="nav-button selected" href="videos.html">Vídeos</a>
+<a aria-disabled="true" class="nav-button" href="imagens.html">Imagens</a>
+<a aria-disabled="true" class="nav-button" href="sobre.html">Sobre</a>
+<a aria-disabled="true" class="nav-button" href="regras.html">Regras</a>
+<a aria-disabled="true" class="nav-button" href="blog.html">Blog</a>
+</nav>
+<div class="sidebar-bottom">
+<div class="small-lights">
+<i></i><i></i><i></i>
+</div>
+</div>
+</aside>
+<!-- PAINEL CENTRAL -->
+<main class="main-panel">
+<div class="window-title">
+-  Publicações de vídeos:
+
+        <div class="window-actions">
+<span>_</span>
+<span>□</span>
+<span>×</span>
+</div>
+</div>
+<!-- BANNER ORIGINAL -->
+<section aria-label="Chérie" class="hero">
+<div class="hero-inner">
+<img alt="Chérie" class="site-logo" src="cherie.png"/>
+<div class="hero-rule"></div>
+</div>
+<div aria-hidden="true" class="hero-circles">
+<span></span><span></span><span></span>
+</div>
+</section>
+<div class="posts-filter-bar">
+<button class="metal-button filter-button" data-sort="relevantes" type="button">
+    Relevantes
+  </button>
+<button class="metal-button filter-button active" data-sort="recentes" type="button">
+    Recentes
+  </button>
+<button class="metal-button filter-button" data-sort="antigos" type="button">
+    Antigos
+  </button>
+</div>
+<!-- PUBLICAÇÕES -->
+<section class="welcome-window member-welcome">
+<div class="welcome-heading">
+          Explore:
+        </div>
+<div class="member-intro">
+<p>Publicações de vídeos:</p>
+</div>
+<form class="posts-search-form" id="posts-search-form" role="search">
+<input aria-label="Buscar vídeos" id="posts-search" maxlength="100" placeholder="Buscar vídeos..." type="search"/>
+<button class="metal-button" type="submit">
+    Buscar
+  </button>
+</form>
+<section class="member-board posts-board">
+<div class="member-board-title">
+<span>Vídeos</span>
+<button class="posts-metal-button" id="open-compose" type="button">+ Enviar vídeos</button>
+</div>
+<p aria-live="polite" id="forum-feedback" role="status"></p>
+<!-- CRIAR POST -->
+<section class="posts-inner-panel" hidden="" id="compose-panel">
+<div class="posts-section-title">Nova publicação de vídeos</div>
+<form id="video-form">
+<label for="video-title">Título</label><input id="video-title" maxlength="120" placeholder="Título da publicação" required=""/>
+<label for="video-body">Descrição</label><textarea id="video-body" maxlength="5000" placeholder="Descrição opcional..." rows="5"></textarea>
+<div class="sticker-bar" data-target="video-body"></div>
+<label for="video-files">Vídeos (até 6 arquivos, no máximo 30 minutos cada)</label>
+<input accept="video/mp4,video/webm,video/quicktime,video/x-matroska,.mp4,.webm,.mov,.mkv" id="video-files" multiple="" required="" type="file"/>
+<small>Máximo de 150 MB por vídeo. O envio pode demorar; não feche a página durante o upload.</small>
+<div aria-live="polite" id="video-selected"></div>
+<div class="posts-form-actions"><button class="posts-metal-button" id="video-submit" type="submit">Publicar vídeos</button><button class="posts-metal-button" id="cancel-compose" type="button">Cancelar</button></div>
+</form></section>
+<!-- POST ABERTO -->
+<section class="posts-detail" hidden="" id="post-detail">
+<div class="posts-form-actions">
+<button class="posts-metal-button" id="back-to-posts" type="button">← Voltar aos vídeos</button>
+</div>
+<div id="detail-content"></div>
+<div class="posts-section-title">
+              Comentários
+            </div>
+<div id="comments-list"></div>
+<form id="comment-form">
+<label for="comment-body">
+                Escreva um comentário
+              </label>
+<textarea id="comment-body" maxlength="2000" placeholder="Seu comentário..." required="" rows="4"></textarea>
+<div class="sticker-bar" data-target="comment-body"></div>
+<button class="posts-metal-button" type="submit">
+                Comentar
+              </button>
+</form>
+</section>
+<!-- LISTA DE PUBLICAÇÕES -->
+<section aria-label="Lista de vídeos" id="videos-feed"></section>
+<div class="posts-pagination" id="pagination">
+<button class="posts-metal-button" id="prev-page" type="button">
+              ← Anterior
+            </button>
+<span id="page-label">Página 1</span>
+<button class="posts-metal-button" id="next-page" type="button">
+              Próxima →
+            </button>
+</div>
+<div class="member-board-bottom">
+<span>VÍDEOS</span>
+</div>
+</section>
+</section>
+<div class="bottom-controls">
+<span class="round-led"></span>
+<span>Made by Eloyse</span>
+<div class="decorative-bars">
+<i></i><i></i><i></i>
+</div>
+</div>
+</main>
+<!-- PAINEL DIREITO ORIGINAL -->
+<aside aria-label="Sua conta" class="right-rail">
+<div class="rail-top">
+<div class="large-dial">
+<div class="dial-inside"></div>
+</div>
+<span>Controle</span>
+</div>
+<div class="rail-meter">
+<span>Pessoas aqui agora:</span>
+<strong data-online-count aria-live="polite">—</strong>
+<div class="meter-fill"></div>
+</div>
+<div class="rail-bars">
+<i></i><i></i><i></i><i></i><i></i>
+</div>
+<div class="rail-section-title">
+        Sua conta
+      </div>
+<div class="member-account">
+<div class="member-account-header">
+<span class="account-led"></span>
+          CONECTADO
+        </div>
+<img alt="Sua foto de perfil" class="member-avatar" id="forum-avatar" src="initial.jpeg"/>
+<strong id="forum-username">
+          Carregando...
+        </strong>
+<span class="member-account-caption">
+          usuário
+        </span>
+</div>
+<a aria-current="page" class="account-button" href="#">
+           Ajude
+         </a>
+<a class="account-button" href="perfil.html">
+  Seu perfil
+</a>
+<div class="rail-dial">
+<div></div>
+</div>
+<div class="rail-footer">
+        Gatorade
+      </div>
+</aside>
+</div>
+<footer class="taskbar">
+<div class="start-mark"></div>
+<div class="task-fill"></div>
+</footer>
+</div>
+<script src="presenca.js" defer></script>
+</body>
+</html>

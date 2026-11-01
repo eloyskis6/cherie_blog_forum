@@ -1,0 +1,48 @@
+CHÉRIE - SEÇÃO IMAGENS
+=======================
+
+1. Faça backup antes de qualquer substituição:
+   cd ~/Downloads/forum_metalico
+   cp servidor.py servidor_backup_antes_imagens.py
+   cp usuarios.db usuarios_backup_antes_imagens.db
+
+2. Instale a biblioteca de verificação das imagens no Linux Mint:
+   sudo apt update
+   sudo apt install python3-pil
+
+   Se seu Python não encontrar PIL, use um ambiente virtual com Pillow:
+   python3 -m venv --system-site-packages .venv
+   .venv/bin/python3 -c 'from PIL import Image; print("OK")'
+
+3. Extraia o ZIP dentro da pasta forum_metalico. NÃO apague os arquivos existentes.
+
+4. O arquivo servidor_com_videos_e_imagens.py contém o servidor integrado com Posts + Vídeos + Imagens, baseado na versão do servidor incluída no pacote de vídeos anterior.
+   IMPORTANTE: se você editou seu servidor.py desde aquela versão, NÃO sobrescreva-o diretamente. Integre somente:
+     from imagens_backend import ImageMixin, init_image_db
+   na seção de imports; altere:
+     class Handler(VideoMixin, SimpleHTTPRequestHandler):
+   para:
+     class Handler(ImageMixin, SimpleHTTPRequestHandler):
+   e, dentro do bloco if __name__ == '__main__':, depois de init_video_db(connect, ROOT), adicione:
+     init_image_db(connect, ROOT)
+   O ImageMixin herda VideoMixin, portanto preserva as rotas de vídeos.
+
+   Se seu servidor.py não sofreu modificações depois do pacote anterior, você pode substituir usando:
+     cp servidor_com_videos_e_imagens.py servidor.py
+
+5. Ative o link no menu de posts.html, videos.html e index2.html:
+   <a class="nav-button" href="imagens.html">Imagens</a>
+   No próprio imagens.html, a opção já está selecionada.
+
+6. Reinicie o servidor (Ctrl+C, depois):
+   python3 -m py_compile servidor.py imagens_backend.py videos_backend.py
+   python3 servidor.py
+
+7. Abra http://127.0.0.1:8000/imagens.html
+   Verifique http://127.0.0.1:8000/api/images (deve retornar JSON, mesmo sem publicações).
+
+LIMITES: 10 imagens/publicação; 12 MB/imagem; 30 megapixels/imagem.
+Os arquivos ficam na pasta image_uploads, criada automaticamente.
+O banco usuarios.db não deve ser excluído nem recriado manualmente.
+
+SEGURANÇA: implementação para desenvolvimento local. Antes de publicar na internet, revise sessões, permissões, limites, proteção contra uploads maliciosos e moderação.

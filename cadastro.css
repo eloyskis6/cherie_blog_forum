@@ -1,0 +1,210 @@
+/* Complemento ao visual metálico original */
+.register-window{min-height:0}.register-layout{display:grid;grid-template-columns:minmax(150px,.8fr) minmax(0,1.2fr);gap:18px;padding:20px;align-items:start}.register-art{text-align:center;color:#3d604b}.writing-cat{display:block;width:100%;max-width:340px;height:auto;object-fit:contain;margin:0 auto;mix-blend-mode:multiply;filter:drop-shadow(0 5px 6px #35564455)}.register-art p{font-size:11px}.register-form{display:flex;flex-direction:column;gap:8px;min-width:0}.register-form>label,.age-heading label,.sex-fieldset legend{font-weight:bold;color:#294d3a;font-size:11px}.register-form input:not([type=range]):not([type=radio]){width:100%;min-width:0;padding:11px;border:3px inset #d9e9d6;border-radius:5px;background:linear-gradient(#eaf4e5,#c3dcc7);color:#243c30;font:12px Tahoma,Verdana,sans-serif;box-shadow:inset 1px 2px 4px #476b5260}.register-form input:focus-visible,.register-submit:focus-visible,.sex-choice:focus-within{outline:2px solid #f6ffdd;outline-offset:2px}.age-heading{display:flex;align-items:center;justify-content:space-between;margin-top:9px}.age-heading output{padding:5px 9px;border:2px ridge #d9edda;background:linear-gradient(#cfe4d0,#719d83);font-weight:bold}.register-form input[type=range]{width:100%;accent-color:#426f57;cursor:pointer}.age-scale{display:flex;justify-content:space-between;color:#486852;font-size:10px}.age-message{margin:2px 0 10px;padding:10px;border:2px inset #c5d9c7;background:#b9d3be;font-size:11px;line-height:1.5}.sex-fieldset{border:2px ridge #d8e9d6;padding:10px;min-width:0}.sex-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:6px}.sex-choice{display:flex;align-items:center;justify-content:center;gap:4px;cursor:pointer;padding:9px 4px;border:2px outset #d5e7d5;border-radius:9px;background:linear-gradient(#f3fff0,#a4c4ad 48%,#688d79 52%,#b8d4bd);font-size:11px;font-weight:bold;white-space:nowrap}.sex-choice input{accent-color:#436c55;margin:0 2px 0 0}.sex-symbol{font-size:19px;line-height:1}.woman .sex-symbol{color:#d8488c}.man .sex-symbol{color:#246ac4}.other .sex-symbol{color:#8c48c7}.sex-choice:has(input:checked){box-shadow:inset 0 0 0 2px #ecffea;background:linear-gradient(#d2e9d3,#739b82 52%,#4c765e);border-style:inset}.privacy-note{font-size:10px;color:#466b51;margin:4px 0}.register-submit{padding:12px;border:3px outset #d6e9d5;border-radius:12px;background:linear-gradient(#f1fae9,#a5c8ae 35%,#5c846d 53%,#426c56);color:#e8f6e8;text-shadow:0 1px 2px #294536;font-weight:bold;cursor:pointer;box-shadow:0 3px 4px #31534280}.register-submit:hover{filter:brightness(1.1)}.register-submit:disabled{opacity:.65;cursor:wait}.form-feedback{min-height:1.2em;font-size:11px;margin:0}.form-feedback.error{color:#8b2424}.form-feedback.success{color:#245c37}
+@media(max-width:900px){.register-layout{grid-template-columns:1fr;gap:10px}.writing-cat{max-width:220px}}@media(max-width:600px){.register-layout{padding:12px;gap:8px}.writing-cat{max-width:190px}.sex-options{grid-template-columns:1fr}.sex-choice{justify-content:flex-start;padding-left:15px}.register-form input:not([type=range]):not([type=radio]){font-size:16px}.register-art p{margin:5px 0 10px}}
+
+/* ==========================================
+   CHÉRIE - SELEÇÃO DE PAÍS
+   Estética Y2K / Verde metálico
+   ========================================== */
+
+.country-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 13px;
+  min-width: 0;
+
+  border: 3px ridge #d8e9d6;
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #e8f5e5 0%,
+      #c4dcc8 35%,
+      #91b29b 52%,
+      #c1d9c5 100%
+    );
+
+  box-shadow:
+    inset 2px 2px 3px #ffffff9c,
+    inset -2px -2px 5px #476b5266,
+    0 3px 6px #35564435;
+
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
+/* Título */
+
+.country-field > label[for="country"] {
+  color: #294d3a;
+  font-size: 11px;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #ffffffa8;
+}
+
+/* Menu de países */
+
+.country-select {
+  width: 100%;
+  min-width: 0;
+  padding: 11px 35px 11px 12px;
+
+  border: 3px inset #d9e9d6;
+  border-radius: 6px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #f2fff0 0%,
+      #d5e9d5 42%,
+      #a8c9b0 100%
+    );
+
+  color: #243c30;
+
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+
+  box-shadow:
+    inset 1px 2px 4px #476b5260,
+    0 1px 0 #ffffff90;
+
+  cursor: pointer;
+  transition:
+    border-color .15s ease,
+    box-shadow .15s ease;
+}
+
+.country-select:hover {
+  border-color: #8bb69a;
+  filter: brightness(1.03);
+}
+
+.country-select:focus-visible {
+  outline: 2px solid #f6ffdd;
+  outline-offset: 2px;
+  border-color: #426f57;
+}
+
+/* Opções do seletor */
+
+.country-select option {
+  background: #e3f0e1;
+  color: #294d3a;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 12px;
+}
+
+/* Texto explicativo */
+
+.country-help {
+  color: #466b51;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* Privacidade */
+
+.country-privacy {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: 5px;
+  padding: 10px;
+
+  border: 2px outset #d5e7d5;
+  border-radius: 7px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #effbed,
+      #bad4c0 48%,
+      #8fb09a
+    );
+
+  box-shadow:
+    inset 0 1px 0 #ffffffad,
+    0 2px 3px #35564430;
+
+  color: #294d3a;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1.5;
+
+  cursor: pointer;
+}
+
+.country-privacy:hover {
+  filter: brightness(1.06);
+}
+
+.country-privacy:has(input:checked) {
+  border-style: inset;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #d1e8d3,
+      #8fb79b 48%,
+      #648b73
+    );
+}
+
+.country-privacy input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin: 0;
+
+  accent-color: #426f57;
+  cursor: pointer;
+}
+
+.country-privacy span {
+  flex: 1;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+  .country-field {
+    padding: 10px;
+    margin-top: 8px;
+  }
+
+  .country-select {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .country-privacy {
+    padding: 11px 8px;
+    font-size: 11px;
+  }
+
+  .country-help {
+    font-size: 10px;
+  }
+}
+/* Corrige os limites do formulário de cadastro */
+.register-layout,
+.register-form,
+.country-field {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.country-select {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
